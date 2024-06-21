@@ -39,10 +39,10 @@ export default function Product() {
       <Header />
       <div className="h-40" />
       <section className="relative  min-h-screen flex items-center ">
-        <div className="w-full mx-auto px-4 py-8 sm:px-6 lg:px-0 bg-slate-800 max-w-6xl rounded-md">
+        <div className="w-full mx-auto px-4 overflow-hidden sm:px-6 lg:px-0 bg-slate-800 max-w-6xl rounded-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
             <div className="img">
-              <div className="img-box h-full max-lg:mx-auto items-center flex">
+              <div className="img-box h-full max-lg:mx-auto items-center flex bg-white">
                 <img
                   src={product["Variant Image"]}
                   alt="Yellow Tropical Printed Shirt image"
@@ -50,7 +50,7 @@ export default function Product() {
                 />
               </div>
             </div>
-            <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
+            <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0 py-8">
               <div className="data w-full max-w-xl">
                 <h2 className="font-manrope font-bold text-3xl leading-10 text-white mb-2 capitalize">
                   {product.Title}
