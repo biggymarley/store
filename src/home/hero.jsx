@@ -8,10 +8,13 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden ">
       <div className="flex relative">
-        <div className={`bg-[url('${home.hero.heroimg}')] w-full` }>
+        <div className={`w-full relative z-20`}>
           <Content />
         </div>
-        {/* <img src={home.hero.heroimg} className="z-0 my-auto" /> */}
+        <div className="absolute w-full h-full bg-slate-900/30 z-10" />
+        <div className="absolute h-full z-1">
+          <img src={home.hero.heroimg} className="w-full h-full object-cover blur-sm" />
+        </div>
       </div>
       <Beams />
       {/* <Brands /> */}
@@ -90,7 +93,7 @@ const LogoItemsBottom = () => (
 
 const Content = () => {
   return (
-    <div className="relative  mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-24 md:px-8 md:py-36 min-h-[60vh] mt-60">
+    <div className="relative  mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-24 md:px-8 md:py-36 min-h-[60vh] mt-60 bg-slate-900/40 rounded-lg mb-16 backdrop-blur-sm">
       <motion.h1
         initial={{
           y: 25,
@@ -123,7 +126,7 @@ const Content = () => {
           delay: 0.5,
           ease: "easeInOut",
         }}
-        className="mb-9 max-w-2xl text-center text-base leading-relaxed text-zinc-400 sm:text-lg md:text-lg md:leading-relaxed"
+        className="mb-9 max-w-2xl text-center text-base leading-relaxed text-zinc-100 sm:text-lg md:text-lg md:leading-relaxed"
       >
         {home.hero.description}
       </motion.p>
