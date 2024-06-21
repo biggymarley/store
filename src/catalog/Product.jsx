@@ -14,6 +14,7 @@ export default function Product() {
 
   const { data } = useContext(ProuctsContext);
   const { id } = useParams();
+  const [count, setcount] = useState(1);
   const [product, setProduct] = useState({
     id: "",
     productName: "",
@@ -83,15 +84,23 @@ export default function Product() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-8">
                   <div className="flex sm:items-center sm:justify-center w-full">
-                    <button className="group py-6 px-6 border border-gray-400 rounded-l-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300">
+                    <button
+                      onClick={() => setcount(count - 1 > 0 ? count - 1 : 1)}
+                      className="group py-6 px-6 border border-gray-400 rounded-l-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300"
+                    >
                       <BiMinus />
                     </button>
                     <input
                       type="text"
+                      value={count}
+                      // onChange={(e) => setcount(e.target.value)}
                       className="font-semibold text-white cursor-pointer text-lg py-5 px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-white text-center "
                       placeholder="1"
                     />
-                    <button className="group py-6 px-6 border border-gray-400 rounded-r-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300">
+                    <button
+                      onClick={() => setcount(count + 1)}
+                      className="group py-6 px-6 border border-gray-400 rounded-r-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300"
+                    >
                       <BiPlus />
                     </button>
                   </div>

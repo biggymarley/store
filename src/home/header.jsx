@@ -5,11 +5,13 @@ import useMeasure from "react-use-measure";
 import StickyCountdown from "./countdown";
 import { home } from "../data";
 import { Link } from "react-router-dom";
+import { BiCart } from "react-icons/bi";
 
 const Header = () => {
   return (
     <>
       <GlassNavigation />
+      <div className="h-10" />
     </>
   );
 };
@@ -68,7 +70,7 @@ const Buttons = ({ setMenuOpen }) => (
         to={action.path}
         className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95"
       >
-        {action.name}
+        {action.name === "CART" ? <BiCart size={30}/> : action.name}
       </Link>
     ))}
 
@@ -102,10 +104,10 @@ const MobileMenu = ({ menuOpen }) => {
       }}
       className="block overflow-hidden md:hidden"
     >
-      <div ref={ref} className="flex items-center justify-between px-4 pb-4">
-        <div className="flex items-center gap-4">
+      <div ref={ref} className="flex items-center justify-center px-4 pb-4 ">
+        <div className="flex items-center gap-4 flex-col">
           {home.headLinks.map((link, index) => (
-            <GlassLink text={link.name} key={index} />
+            <GlassLink text={link.name} key={index} path={link.path} />
           ))}
         </div>
       </div>

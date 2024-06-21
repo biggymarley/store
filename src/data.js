@@ -22,6 +22,7 @@ import {
   SiHeroku,
   SiNike,
 } from "react-icons/si";
+import { PiCarThin } from "react-icons/pi";
 
 const emailsup = "support@aquafeast.shop";
 const emailcontact = "contact@aquafeast.shop";
@@ -50,9 +51,13 @@ export const home = {
     },
   ],
   headAction: [
+    // {
+    //   name: "Buy Now",
+    //   path: "/catalog",
+    // },
     {
-      name: "Buy Now",
-      path: "/catalog",
+      name: 'CART',
+      path: "/catalosg",
     },
   ],
   hero: {

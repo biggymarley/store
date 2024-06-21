@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { home } from "../data";
+import { home, priceTag } from "../data";
 import { Link } from "react-router-dom";
+import { ProuctsContext } from "../Context";
 
 export const Products = () => {
+  const { data } = useContext(ProuctsContext);
   return (
-    <section className="mx-auto max-w-7xl px-4 py-12 text-slate-800">
+    <section className="mx-auto max-w-7xl px-4 py-12 text-slate-800 relative z-10">
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
         <motion.h2
           initial={{
@@ -34,37 +36,75 @@ export const Products = () => {
         </Link>
       </div>
       <div className="mb-4 grid grid-cols-12 gap-4">
-        {home.productstop.map((prd, index) => (
-          <BounceCard className={prd.className} key={index}>
-            <div className="font-bold text-xl absolute top-0  right-4  ">
-              {prd.price}
-            </div>
-            <CardTitle>{prd.name}</CardTitle>
-            <div
-              className={`absolute bottom-0 left-4 right-4 top-40 translate-y-8 rounded-t-2xl p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg] ${prd.bg}`}
-            >
-              <span className="block text-center font-semibold text-indigo-50">
-                <div dangerouslySetInnerHTML={{ __html: prd.description }} />
-              </span>
-            </div>
-          </BounceCard>
+        {data?.slice(6, 9)?.map((prd, index) => (
+          <div
+            className="col-span-12 md:col-span-4  bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl  overflow-hidden "
+            key={index}
+          >
+            <Link to={`/catalog/${prd.Handle}`}>
+              <img
+                src={prd["Variant Image"]}
+                alt="Product"
+                className="h-80 w-full object-contain rounded-t-xl "
+              />
+              <div className="px-4 py-3 bg-slate-100 h-full">
+                <span className="text-gray-400 mr-3 uppercase text-xs">
+                  {prd["Vendor"]}
+                </span>
+                <p className="text-lg font-bold text-black  block capitalize">
+                  {prd.Title}
+                </p>
+                <div className="flex items-center">
+                  <p className="text-lg font-semibold text-black cursor-auto my-3">
+                    {priceTag}
+                    {prd["Variant Price"]}
+                  </p>
+                  <del>
+                    <p className="text-sm text-gray-600 cursor-auto ml-2">
+                      {priceTag}
+                      {prd["Variant Compare At Price"]}
+                    </p>
+                  </del>
+                </div>
+              </div>
+            </Link>
+          </div>
         ))}
       </div>
       <div className="grid grid-cols-12 gap-4">
-        {home.productsbottom.map((prd, index) => (
-          <BounceCard className={prd.className} key={index}>
-            <div className="font-bold text-xl absolute top-0  right-4  text-slate-700">
-              {prd.price}
-            </div>
-            <CardTitle>{prd.name}</CardTitle>
-            <div
-              className={`absolute bottom-0 left-4 right-4 top-40 translate-y-8 rounded-t-2xl p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg] ${prd.bg}`}
-            >
-              <span className="block text-left font-semibold text-indigo-50">
-                <div dangerouslySetInnerHTML={{ __html: prd.description }} />
+        {data?.slice(3, 6)?.map((prd, index) => (
+          <div
+          className="col-span-12 md:col-span-4  bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl  overflow-hidden "
+          key={index}
+        >
+          <Link to={`/catalog/${prd.Handle}`}>
+            <img
+              src={prd["Variant Image"]}
+              alt="Product"
+              className="h-80 w-full object-contain rounded-t-xl "
+            />
+            <div className="px-4 py-3 bg-slate-100 h-full">
+              <span className="text-gray-400 mr-3 uppercase text-xs">
+                {prd["Vendor"]}
               </span>
+              <p className="text-lg font-bold text-black  block capitalize">
+                {prd.Title}
+              </p>
+              <div className="flex items-center">
+                <p className="text-lg font-semibold text-black cursor-auto my-3">
+                  {priceTag}
+                  {prd["Variant Price"]}
+                </p>
+                <del>
+                  <p className="text-sm text-gray-600 cursor-auto ml-2">
+                    {priceTag}
+                    {prd["Variant Compare At Price"]}
+                  </p>
+                </del>
+              </div>
             </div>
-          </BounceCard>
+          </Link>
+        </div>
         ))}
       </div>
     </section>
@@ -91,5 +131,9 @@ const BounceCard = ({ className, children }) => {
 };
 
 const CardTitle = ({ children }) => {
-  return <h3 className="mx-auto text-left text-3xl font-bold">{children}</h3>;
+  return (
+    <h3 className="mx-auto text-left text-3xl font-bold capitalize">
+      {children}
+    </h3>
+  );
 };
