@@ -6,10 +6,8 @@ export default function Contactus() {
   return (
     <>
       <Header />
-
       <div className="h-60" />
-
-      <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto min-h-[50vh] bg-slate-900 font-[sans-serif] ">
+      <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto min-h-[50vh] bg-slate-900 font-[sans-serif] max-w-6xl">
         <div className="flex flex-col justify-center h-full">
           <h1 className="text-white text-3xl font-extrabold">Contact Us</h1>
           <div className="flex flex-col gap-3">
@@ -17,7 +15,6 @@ export default function Contactus() {
             <p className="text-sm text-gray-300">{home.contactus.adrs}</p>
             <p className="text-sm text-gray-300">{home.contactus.phonetitle}</p>
             <p className="text-sm text-gray-300">
-              {" "}
               {home.contactus.phonesubtitle}
             </p>
             <p className="text-sm text-gray-300"> {home.contactus.phone}</p>
@@ -51,7 +48,6 @@ export default function Contactus() {
             </ul>
           </div>
         </div>
-
         <form className="ml-auto space-y-4 flex flex-col w-full justify-center  h-full">
           <input
             type="text"

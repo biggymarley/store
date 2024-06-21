@@ -2,8 +2,10 @@ import React from "react";
 import Header from "../home/header";
 import Footer from "../home/footer";
 import { productsData } from "../data";
+import { useNavigate } from "react-router-dom";
 
 export default function Catalog() {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -15,7 +17,11 @@ export default function Catalog() {
 
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {productsData.map((product, index) => (
-              <a href="#" className="group" key={index}>
+              <div
+                onClick={() => navigate(`/catalog/${product.id}`)}
+                className="group"
+                key={index}
+              >
                 <div className="aspect-h-1 aspect-w-1 w-full h-[450px] overflow-hidden rounded-lg bg-white xl:aspect-h-8 xl:aspect-w-7">
                   <img
                     src={product.image}
@@ -29,7 +35,7 @@ export default function Catalog() {
                 <p className="mt-1 text-lg font-medium text-white">
                   {product.price}
                 </p>
-              </a>
+              </div>
             ))}
           </div>
         </div>

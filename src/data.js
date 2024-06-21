@@ -450,6 +450,7 @@ export const home = {
 
 export const productsData = [
   {
+    id: "A1B2C3D4E5F6",
     productName:
       "Fish Sulfa Forte - Sulfamethoxazole 800 mg, Trimethoprim 160 mg Tablets (30 Count)",
     price: "£69.95",
@@ -457,6 +458,7 @@ export const productsData = [
       "https://haldobled.myshopify.com/cdn/shop/files/SUL_360x.png?v=1718923423",
   },
   {
+    id: "G7H8I9J0K1L2",
     productName:
       "Fish sulfa forte Sulfamethoxazole /Trimethoprim 800mg 100 count",
     price: "£69.95",
@@ -464,21 +466,25 @@ export const productsData = [
       "https://haldobled.myshopify.com/cdn/shop/files/sulfa-1001_360x.jpg?v=1718923468",
   },
   {
+    id: "M3N4O5P6Q7R8",
     productName: "fish zithro azithromycin 30 tablets",
     price: "£69.95",
     image:
       "https://haldobled.myshopify.com/cdn/shop/files/aquariumazithromycin30_360x.jpg?v=1718923396",
   },
   {
+    id: "S9T0U1V2W3X4",
     productName: "Fish Zole Forte - Metronidazole 500 mg (60 Count)",
     price: "£89.99",
     image:
       "https://haldobled.myshopify.com/cdn/shop/files/MET30_0a140cf4-8dd9-4856-a085-e9211a0df7ea_360x.png?v=1718923360",
   },
   {
+    id: "Y5Z6A7B8C9D0",
     productName: "fish zole forte - Metronidazole 500 mg 100 Tablets",
     price: "£89.95",
     image:
       "https://haldobled.myshopify.com/cdn/shop/files/metronidazole-500-100pak_360x.jpg?v=1718923462",
   },
 ];
+

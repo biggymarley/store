@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
 import { FaCheckCircle } from "react-icons/fa";
-import Header from "../home/header";
+import { useParams } from "react-router-dom";
+import { productsData } from "../data";
 import Footer from "../home/footer";
+import Header from "../home/header";
 
 export default function Product() {
+  const { id } = useParams();
+  const [product, setProduct] = useState({
+    id: "",
+    productName: "",
+    price: "",
+    image: "",
+  });
+
+  const fetchdata = () => {
+    const res = productsData.filter((p) => p.id == id);
+    if (res && res.length > 0) setProduct({ ...res[0] });
+    console.log(product);
+  };
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
   return (
     <>
       <Header />
       <div className="h-40" />
-      <section className="relative  min-h-screen flex items-center">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-0">
+      <section className="relative  min-h-screen flex items-center ">
+        <div className="w-full mx-auto px-4 py-8 sm:px-6 lg:px-0 bg-slate-800 max-w-6xl rounded-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
             <div className="img">
               <div className="img-box h-full max-lg:mx-auto ">
                 <img
-                  src="https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png"
+                  src={product.image}
                   alt="Yellow Tropical Printed Shirt image"
                   className="max-lg:mx-auto lg:mx-auto  h-full"
                 />
@@ -25,11 +44,11 @@ export default function Product() {
             <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
               <div className="data w-full max-w-xl">
                 <h2 className="font-manrope font-bold text-3xl leading-10 text-white mb-2 capitalize">
-                  Basic Yellow Tropical Printed Shirt
+                  {product.productName}
                 </h2>
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
                   <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
-                    $220
+                    {product.price}
                   </h6>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
