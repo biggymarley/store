@@ -10,7 +10,7 @@ import { twMerge } from "tailwind-merge";
 
 export const FoldingLogos = () => {
   return (
-    <section className="flex flex-col items-center justify-center gap-12 bg-neutral-950 px-4 py-24 md:flex-row">
+    <section className="flex flex-col items-center justify-center gap-12 bg-neutral-950 px-4 py-24 md:flex-row z-20 relative">
       <Copy />
       <LogoRolodex
         items={[
@@ -33,7 +33,7 @@ export const FoldingLogos = () => {
 };
 
 const Copy = () => (
-  <div className="max-w-lg text-center md:text-start">
+  <div className="max-w-lg text-center md:text-start z-20">
     <h2 className="mb-3 text-4xl text-white">Accepted Payment Methods</h2>
     <p className="mb-6 text-sm leading-relaxed text-neutral-400">
       Shop confidently with [Your Company Name]. Our hassle-free return policy

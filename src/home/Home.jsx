@@ -6,7 +6,7 @@ import { Products } from "./products";
 import { StaggerTestimonials } from "./rating";
 export default function Home() {
   return (
-    <div>
+    <div className="z-10">
       <Header />
       <Hero />
       <Products />
