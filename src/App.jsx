@@ -4,7 +4,7 @@ import MainRouter from "./mainRouter";
 import useFetchJson from "./useFetchJson";
 
 function App() {
-  const { data, loading, error } = useFetchJson("../products.json");
+  const { data, loading, error } = useFetchJson("/products.json");
 
   return (
     <ProuctsContext.Provider value={{ data, loading, error }}>
