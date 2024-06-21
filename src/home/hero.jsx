@@ -7,7 +7,12 @@ import { home } from "../data";
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden ">
-      <Content />
+      <div className="flex relative">
+        <div className={`bg-[url('${home.hero.heroimg}')] w-full` }>
+          <Content />
+        </div>
+        {/* <img src={home.hero.heroimg} className="z-0 my-auto" /> */}
+      </div>
       <Beams />
       {/* <Brands /> */}
     </section>
@@ -150,8 +155,6 @@ const Content = () => {
   );
 };
 
-
-
 const SplashButton = ({ children, className, ...rest }) => {
   return (
     <Link
@@ -166,8 +169,6 @@ const SplashButton = ({ children, className, ...rest }) => {
     </Link>
   );
 };
-
-;
 
 const Beams = () => {
   const { width } = useWindowSize();

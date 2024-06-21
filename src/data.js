@@ -1,4 +1,5 @@
 import logo from "./assets/logo.png";
+import hero from "./assets/hero.jpeg";
 import {
   Si3M,
   SiAbstract,
@@ -55,6 +56,7 @@ export const home = {
     },
   ],
   hero: {
+    heroimg: hero,
     title: "Premium Tank Fish Food for Healthy & Vibrant Fish",
     description: `Welcome to ${storename} Fish Food, your trusted source for high-quality tank fish food designed to keep your aquatic pets thriving. Our specially formulated fish food supports optimal growth, vibrant colors, and robust health, ensuring your fish live a long and happy life. Whether you have tropical fish, goldfish, or exotic species, our products cater to all dietary needs. Dive into a world where your fish's health is our top priority. Shop now and give your fish the nutrition they deserve!`,
     button: {
