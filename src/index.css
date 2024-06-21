@@ -1,7 +1,15 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 body {
   margin: 0;
+}
+
+ul {
+  display: grid;
+  row-gap: 8px;
+  margin: 16px 0;
+  font-weight: bold;
+  list-style: circle;
+  margin-left: 35px;
 }

@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
 import { FaCheckCircle } from "react-icons/fa";
-import { useParams } from "react-router-dom";
-import { productsData } from "../data";
+import { useNavigate, useParams } from "react-router-dom";
+import { ProuctsContext } from "../Context";
 import Footer from "../home/footer";
 import Header from "../home/header";
+import { priceTag } from "../data";
+import { toast } from "sonner";
 
 export default function Product() {
+  const navigate = useNavigate();
+
+  const { data } = useContext(ProuctsContext);
   const { id } = useParams();
   const [product, setProduct] = useState({
     id: "",
@@ -17,9 +22,13 @@ export default function Product() {
   });
 
   const fetchdata = () => {
-    const res = productsData.filter((p) => p.id == id);
+    const res = data?.filter((p) => p.Handle == id);
     if (res && res.length > 0) setProduct({ ...res[0] });
-    console.log(product);
+    else {
+      navigate("/catalog");
+      toast.error("Product not found");
+    }
+    console.log(id);
   };
   useEffect(() => {
     fetchdata();
@@ -33,22 +42,23 @@ export default function Product() {
         <div className="w-full mx-auto px-4 py-8 sm:px-6 lg:px-0 bg-slate-800 max-w-6xl rounded-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
             <div className="img">
-              <div className="img-box h-full max-lg:mx-auto ">
+              <div className="img-box h-full max-lg:mx-auto items-center flex">
                 <img
-                  src={product.image}
+                  src={product["Variant Image"]}
                   alt="Yellow Tropical Printed Shirt image"
-                  className="max-lg:mx-auto lg:mx-auto  h-full"
+                  className="max-lg:mx-auto lg:mx-auto  "
                 />
               </div>
             </div>
             <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
               <div className="data w-full max-w-xl">
                 <h2 className="font-manrope font-bold text-3xl leading-10 text-white mb-2 capitalize">
-                  {product.productName}
+                  {product.Title}
                 </h2>
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
                   <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
-                    {product.price}
+                    {priceTag}
+                    {product["Variant Price"]}
                   </h6>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
@@ -63,41 +73,13 @@ export default function Product() {
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-100 text-base font-normal mb-5">
-                  Introducing our vibrant Basic Yellow Tropical Printed Shirt -
-                  a celebration of style and sunshine! Embrace the essence of
-                  summer wherever you go with this eye-catching piece that
-                  effortlessly blends comfort and tropical flair.
-                </p>
-                <ul className="grid gap-y-4 mb-8">
-                  <li className="flex items-center gap-3">
-                    <FaCheckCircle color="#4F46E5" />
-                    <span className="font-normal text-base text-white ">
-                      Branded shirt
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaCheckCircle color="#4F46E5" />
 
-                    <span className="font-normal text-base text-white ">
-                      3 color shirt
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaCheckCircle color="#4F46E5" />
-
-                    <span className="font-normal text-base text-white ">
-                      Pure Cotton Shirt with 60% as 40%
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaCheckCircle color="#4F46E5" />
-
-                    <span className="font-normal text-base text-white ">
-                      all size is available
-                    </span>
-                  </li>
-                </ul>
+                <div>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: product["Body (HTML)"] }}
+                    className="text-white"
+                  />
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-8">
                   <div className="flex sm:items-center sm:justify-center w-full">

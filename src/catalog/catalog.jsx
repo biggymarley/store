@@ -1,11 +1,13 @@
-import React from "react";
-import Header from "../home/header";
-import Footer from "../home/footer";
-import { productsData } from "../data";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ProuctsContext } from "../Context";
+import Footer from "../home/footer";
+import Header from "../home/header";
+import { priceTag } from "../data";
 
 export default function Catalog() {
   const navigate = useNavigate();
+  const { data, loading, error } = useContext(ProuctsContext);
   return (
     <>
       <Header />
@@ -16,24 +18,24 @@ export default function Catalog() {
           <h2 className="sr-only">Products</h2>
 
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {productsData.map((product, index) => (
+            {data?.map((product, index) => (
               <div
-                onClick={() => navigate(`/catalog/${product.id}`)}
+                onClick={() => navigate(`/catalog/${product.Handle}`)}
                 className="group"
                 key={index}
               >
                 <div className="aspect-h-1 aspect-w-1 w-full h-[450px] overflow-hidden rounded-lg bg-white xl:aspect-h-8 xl:aspect-w-7">
                   <img
-                    src={product.image}
+                    src={product["Variant Image"]}
                     alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
                     className="h-full w-full object-contain object-center group-hover:opacity-75"
                   />
                 </div>
-                <h3 className="mt-4 text-sm text-white">
-                  {product.productName}
+                <h3 className="mt-4 text-sm text-white capitalize">
+                  {product.Title}
                 </h3>
                 <p className="mt-1 text-lg font-medium text-white">
-                  {product.price}
+                {priceTag}{product["Variant Price"]}
                 </p>
               </div>
             ))}
