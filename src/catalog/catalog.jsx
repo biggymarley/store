@@ -34,9 +34,19 @@ export default function Catalog() {
                 <h3 className="mt-4 text-sm text-white capitalize">
                   {product.Title}
                 </h3>
-                <p className="mt-1 text-lg font-medium text-white">
-                {priceTag}{product["Variant Price"]}
-                </p>
+                <div className="flex  items-center gap-2">
+                <del className="text-white">
+                    <p className="text-lg text-white cursor-auto">
+                      {priceTag}
+                      {product["Variant Compare At Price"]}
+                    </p>
+                  </del>
+                  <p className="text-lg font-medium text-white">
+                    {priceTag}
+                    {product["Variant Price"]}
+                  </p>
+                
+                </div>
               </div>
             ))}
           </div>

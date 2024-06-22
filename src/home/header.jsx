@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 import StickyCountdown from "./countdown";
 import { home } from "../data";
 import { Link } from "react-router-dom";
 import { BiCart } from "react-icons/bi";
+import { ProuctsContext } from "../Context";
 
 const Header = () => {
   return (
@@ -62,27 +63,35 @@ const GlassLink = ({ text, path }) => {
   );
 };
 
-const Buttons = ({ setMenuOpen }) => (
-  <div className="flex items-center gap-4">
-    {home.headAction.map((action, index) => (
-      <Link
-        key={index}
-        to={action.path}
-        className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95"
+const Buttons = ({ setMenuOpen }) => {
+  const { cartLength } = useContext(ProuctsContext);
+  return (
+    <div className="flex items-center gap-4">
+      {home.headAction.map((action, index) => (
+        <Link
+          key={index}
+          to={action.path}
+          className="relative scale-100  rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95"
+        >
+          {action.name === "CART" && cartLength > 0 ? (
+            <span className="absolute bg-red-500 w-6 h-6 text-center rounded-full text-sm font-bold -top-2 -left-2">
+              {cartLength}
+            </span>
+          ) : null}
+
+          {action.name === "CART" ? <BiCart size={30} /> : action.name}
+        </Link>
+      ))}
+
+      <button
+        onClick={() => setMenuOpen((pv) => !pv)}
+        className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
       >
-        {action.name === "CART" ? <BiCart size={30}/> : action.name}
-      </Link>
-    ))}
-
-    <button
-      onClick={() => setMenuOpen((pv) => !pv)}
-      className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
-    >
-      <FiMenu />
-    </button>
-  </div>
-);
-
+        <FiMenu />
+      </button>
+    </div>
+  );
+};
 const SignInButton = () => {
   return (
     <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">

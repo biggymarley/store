@@ -12,7 +12,7 @@ import { toast } from "sonner";
 export default function Product() {
   const navigate = useNavigate();
 
-  const { data } = useContext(ProuctsContext);
+  const { data, addItem } = useContext(ProuctsContext);
   const { id } = useParams();
   const [count, setcount] = useState(1);
   const [product, setProduct] = useState({
@@ -57,10 +57,16 @@ export default function Product() {
                   {product.Title}
                 </h2>
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
-                  <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
-                    {priceTag}
-                    {product["Variant Price"]}
-                  </h6>
+                    <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
+                      <del>
+                        <p className="text-sm text-white cursor-auto ml-2">
+                          {priceTag}
+                          {product["Variant Compare At Price"]}
+                        </p>
+                      </del>
+                      {priceTag}
+                      {product["Variant Price"]}
+                    </h6>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
                       <BsStarFill color="#FBBF24" />
@@ -104,7 +110,10 @@ export default function Product() {
                       <BiPlus />
                     </button>
                   </div>
-                  <button className="group py-4 px-5 rounded-full bg-indigo-50 text-indigo-600 font-semibold text-lg w-full flex items-center justify-center gap-2 transition-all duration-500 hover:bg-indigo-100">
+                  <button
+                    onClick={() => addItem(product, count)}
+                    className="group py-4 px-5 rounded-full bg-indigo-50 text-indigo-600 font-semibold text-lg w-full flex items-center justify-center gap-2 transition-all duration-500 hover:bg-indigo-100"
+                  >
                     <svg
                       className="stroke-indigo-600 "
                       width="22"

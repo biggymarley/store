@@ -28,6 +28,7 @@ const emailsup = "support@aquafeast.shop";
 const emailcontact = "contact@aquafeast.shop";
 const phone = "+44 752 960 2271";
 const storename = "AquaFeast";
+const address = "796 Fulham Road, London, SW6 5SL, United Kingdom";
 export const priceTag = "£";
 export const home = {
   storeName: storename,
@@ -56,7 +57,7 @@ export const home = {
     //   path: "/catalog",
     // },
     {
-      name: 'CART',
+      name: "CART",
       path: "/catalosg",
     },
   ],
@@ -188,13 +189,15 @@ export const home = {
     },
     {
       tempId: 4,
-      testimonial: "If I could give 11 stars, I'd give 12. Best fish food ever!",
+      testimonial:
+        "If I could give 11 stars, I'd give 12. Best fish food ever!",
       by: "Andre",
       imgSrc: "https://randomuser.me/api/portraits/men/87.jpg",
     },
     {
       tempId: 5,
-      testimonial: "So happy we found this fish food! Our tank has never been cleaner.",
+      testimonial:
+        "So happy we found this fish food! Our tank has never been cleaner.",
       by: "Marina",
       imgSrc: "https://randomuser.me/api/portraits/women/88.jpg",
     },
@@ -206,7 +209,8 @@ export const home = {
     },
     {
       tempId: 7,
-      testimonial: "Would be lost without this fish food. The ROI is easily 100X for us.",
+      testimonial:
+        "Would be lost without this fish food. The ROI is easily 100X for us.",
       by: "Daniela",
       imgSrc: "https://randomuser.me/api/portraits/women/90.jpg",
     },
@@ -218,19 +222,22 @@ export const home = {
     },
     {
       tempId: 9,
-      testimonial: "I switched 5 years ago and never looked back. Excellent product!",
+      testimonial:
+        "I switched 5 years ago and never looked back. Excellent product!",
       by: "Sofie",
       imgSrc: "https://randomuser.me/api/portraits/women/92.jpg",
     },
     {
       tempId: 10,
-      testimonial: "I've been searching for great fish food for years. So glad I found this one!",
+      testimonial:
+        "I've been searching for great fish food for years. So glad I found this one!",
       by: "Pete",
       imgSrc: "https://randomuser.me/api/portraits/men/93.jpg",
     },
     {
       tempId: 11,
-      testimonial: "It's so simple and intuitive, even my kids can feed the fish with it.",
+      testimonial:
+        "It's so simple and intuitive, even my kids can feed the fish with it.",
       by: "Marina",
       imgSrc: "https://randomuser.me/api/portraits/women/94.jpg",
     },
@@ -261,7 +268,7 @@ export const home = {
         head: "GOT A QUESTION ? CONTACT US :",
         subitems: [
           {
-            name: "📍 796 Fulham Road, London, SW6 5SL, United Kingdom",
+            name: `📍 ${address}`,
             path: "/contact-us",
           },
           { name: `☏ ${phone}`, path: "/contact-us" },
@@ -272,7 +279,7 @@ export const home = {
   },
   contactus: {
     title: "Need To Get In Touch?",
-    adrs: "Our address is 796 Fulham Road, London, SW6 5SL, United Kingdom",
+    adrs: `Our address is ${address}`,
     phonetitle: "Phone Numbers (10 AM to 6 PM EST)",
     phonesubtitle: "ONLINE ORDER SUPPORT:",
     phone: phone,
