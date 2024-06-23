@@ -13,7 +13,7 @@ export const Hero = () => {
         </div>
         <div className="absolute w-full h-full bg-slate-900/30 z-10" />
         <div className="absolute h-full z-1">
-          <img src={home.hero.heroimg} className="w-full h-full object-cover blur-sm" />
+          <img src={home.hero.heroimg} className="w-screen h-full object-cover blur-sm" />
         </div>
       </div>
       <Beams />
