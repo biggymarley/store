@@ -1,15 +1,20 @@
 import { Elements } from "@stripe/react-stripe-js";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ProuctsContext } from "../Context";
 import { priceTag } from "../data";
 import Footer from "../home/footer";
 import Header from "../home/header";
 import usePaymentHook from "../usePaymentHook";
 import CheckoutForm from "./CheckoutForm";
+import { useNavigate } from "react-router-dom";
 
 export default function Payment() {
-  const { total } = useContext(ProuctsContext);
+  const { total, cart } = useContext(ProuctsContext);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    if (cart.length <= 0) navigate("/catalog");
+  }, [cart, navigate]);
   const { stripePromise, clientSecret } = usePaymentHook(total.total);
 
   return (

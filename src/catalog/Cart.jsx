@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ProuctsContext } from "../Context";
 import { priceTag } from "../data";
 import Footer from "../home/footer";
@@ -8,6 +8,12 @@ import Header from "../home/header";
 export default function Cart() {
   const { total, cart, removeItem, removeNumProduct, addNumProduct } =
     useContext(ProuctsContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (cart.length <= 0) navigate("/catalog");
+  }, [cart, navigate]);
+
   return (
     <>
       <Header />

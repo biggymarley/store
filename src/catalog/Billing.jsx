@@ -1,12 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Header from "../home/header";
 import Footer from "../home/footer";
 import { ProuctsContext } from "../Context";
 import { priceTag } from "../data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Billing() {
-  const { total } = useContext(ProuctsContext);
+  const { total, cart } = useContext(ProuctsContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (cart.length <= 0) navigate("/catalog");
+  }, [cart, navigate]);
   return (
     <>
       <Header />
