@@ -1,19 +1,19 @@
 import { loadStripe } from "@stripe/stripe-js";
 import React, { useEffect, useState } from "react";
-
+const url = "https://pymentserver.onrender.com";
 export default function usePaymentHook(total) {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5252/api/config").then(async (r) => {
+    fetch(`${url}/api/config`).then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
     });
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5252/api/create-payment-intent", {
+    fetch(`${url}/api/create-payment-intent`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
