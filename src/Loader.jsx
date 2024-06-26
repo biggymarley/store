@@ -9,7 +9,7 @@ export const Loader = () => {
         exit={{ opacity: 0 }}
         className="fixed  w-screen h-screen bg-slate-900 flex items-center justify-center flex-col gap-8 z-50"
       >
-        <img src={home.logo} className="w-[90px] rounded-full " />
+        <h1 className="text-2xl text-white font-bold mr-4">{home.storeName}</h1>
         <BarLoader />
       </motion.div>
     </div>
