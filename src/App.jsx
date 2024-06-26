@@ -6,11 +6,21 @@ import bb from "./assets/bb.png";
 import useCart from "./useCartManagment";
 function App() {
   const { data, loading, error } = useFetchJson("/products.json");
-  const { cart, cartLength, addItem, removeItem, clearCart } = useCart();
+  const {
+    total,
+    cart,
+    cartLength,
+    addItem,
+    removeItem,
+    clearCart,
+    removeNumProduct,
+    addNumProduct,
+  } = useCart();
 
   return (
     <ProuctsContext.Provider
       value={{
+        total,
         data,
         loading,
         error,
@@ -19,6 +29,8 @@ function App() {
         addItem,
         removeItem,
         clearCart,
+        removeNumProduct,
+        addNumProduct,
       }}
     >
       <Toaster richColors position="top-center" />

@@ -22,6 +22,11 @@ export default function Product() {
     image: "",
   });
 
+  const addandnavigate = () => {
+    addItem(product, count);
+    navigate("/cart");
+  };
+
   const fetchdata = () => {
     const res = data?.filter((p) => p.Handle == id);
     if (res && res.length > 0) setProduct({ ...res[0] });
@@ -29,7 +34,6 @@ export default function Product() {
       navigate("/catalog");
       toast.error("Product not found");
     }
-    console.log(id);
   };
   useEffect(() => {
     fetchdata();
@@ -57,16 +61,16 @@ export default function Product() {
                   {product.Title}
                 </h2>
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
-                    <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
-                      <del>
-                        <p className="text-sm text-white cursor-auto ml-2">
-                          {priceTag}
-                          {product["Variant Compare At Price"]}
-                        </p>
-                      </del>
-                      {priceTag}
-                      {product["Variant Price"]}
-                    </h6>
+                  <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
+                    <del>
+                      <p className="text-sm text-white cursor-auto ml-2">
+                        {priceTag}
+                        {product["Variant Compare At Price"]}
+                      </p>
+                    </del>
+                    {priceTag}
+                    {product["Variant Price"]}
+                  </h6>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
                       <BsStarFill color="#FBBF24" />
@@ -133,7 +137,10 @@ export default function Product() {
                   </button>
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className="text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
+                  <button
+                    onClick={addandnavigate}
+                    className="text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400"
+                  >
                     Buy Now
                   </button>
                 </div>

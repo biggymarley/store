@@ -15,6 +15,10 @@ import Shipping from "./otherpages/shipping";
 import Tos from "./otherpages/tos";
 import Product from "./catalog/Product";
 import Catalog from "./catalog/catalog";
+import Cart from "./catalog/Cart";
+import Billing from "./catalog/Billing";
+import Payment from "./catalog/Payment";
+import Success from "./catalog/Success";
 
 export default function MainRouter() {
   const router = createBrowserRouter([
@@ -27,6 +31,10 @@ export default function MainRouter() {
     { path: "/terms-of-service", element: <Tos /> },
     { path: "/order-status", element: <OrderStatus /> },
     { path: "/catalog/:id", element: <Product /> },
+    { path: "/cart", element: <Cart /> },
+    { path: "/billing", element: <Billing /> },
+    { path: "/payment", element: <Payment /> },
+    { path: "/success", element: <Success /> },
     {
       path: "/catalog",
       element: <Catalog />,

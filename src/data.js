@@ -58,7 +58,7 @@ export const home = {
     // },
     {
       name: "CART",
-      path: "/catalosg",
+      path: "/cart",
     },
   ],
   hero: {
