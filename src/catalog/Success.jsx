@@ -11,13 +11,13 @@ export default function Success() {
 
   useEffect(() => {
     localStorage.removeItem("cart");
-    const timer = setTimeout(() => {
-      navigate("/");
-    }, 5000); // 5000 milliseconds = 5 seconds
+    // const timer = setTimeout(() => {
+    //   navigate("/");
+    // }, 5000); // 5000 milliseconds = 5 seconds
 
-    // Clear the timeout if the component unmounts
-    return () => clearTimeout(timer);
-  }, [navigate]);
+    // // Clear the timeout if the component unmounts
+    // return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>

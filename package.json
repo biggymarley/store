@@ -12,6 +12,8 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.5.0",
+    "firebase": "^10.12.2",
+    "formik": "^2.4.6",
     "framer-motion": "^11.2.11",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
@@ -21,7 +23,9 @@
     "react-router-dom": "^6.23.1",
     "react-use-measure": "^2.1.1",
     "sonner": "^1.5.0",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "uuid": "^10.0.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

@@ -1,12 +1,12 @@
 import { Elements } from "@stripe/react-stripe-js";
 import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { ProuctsContext } from "../Context";
 import { priceTag } from "../data";
 import Footer from "../home/footer";
 import Header from "../home/header";
 import usePaymentHook from "../usePaymentHook";
 import CheckoutForm from "./CheckoutForm";
-import { useNavigate } from "react-router-dom";
 
 export default function Payment() {
   const { total, cart } = useContext(ProuctsContext);
@@ -89,7 +89,7 @@ export default function Payment() {
               Payment
             </li>
           </ol>
-          <div className="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 xl:gap-16">
+          <div className="mt-6 sm:mt-8 lg:flex lg:items-center lg:gap-12 xl:gap-16">
             <div className="min-w-0 flex-1 space-y-8 bg-white p-4">
               <div className="space-y-4">
                 <h2 className="text-xl font-semibold text-gray-900">Payment</h2>
@@ -97,19 +97,9 @@ export default function Payment() {
               {total.total > 0 && clientSecret && stripePromise && (
                 <Elements stripe={stripePromise} options={{ clientSecret }}>
                   <CheckoutForm />
-                  {/* <form >
-                    <PaymentElement />
-                    <button
-                      type="submit"
-                      className="mt-4 flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                    >
-                      Proceed to Payment
-                    </button>
-                  </form> */}
                 </Elements>
               )}
             </div>
-
             <div className="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
               <div className="flow-root">
                 <div className="-my-3 divide-y divide-gray-200 dark:divide-gray-800">

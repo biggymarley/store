@@ -75,6 +75,7 @@ export default function Cart() {
                             type="text"
                             id="counter-input"
                             data-input-counter
+                            onChange={() => {}}
                             className="w-10 shrink-0 border-0 bg-transparent text-center text-xl font-medium text-gray-900 focus:outline-none focus:ring-0 "
                             placeholder=""
                             value={prod.num}
@@ -105,7 +106,7 @@ export default function Cart() {
                           </button>
                         </div>
                         <div className="text-end md:order-4 md:w-32">
-                          <p className="text-xl font-bold text-gray-900 ">
+                          <div className="text-xl font-bold text-gray-900 ">
                             <del>
                               <p className=" text-gray-900  cursor-auto">
                                 {priceTag}
@@ -114,7 +115,7 @@ export default function Cart() {
                             </del>
                             {priceTag}
                             {prod.item["Variant Price"]}
-                          </p>
+                          </div>
                         </div>
                       </div>
 
