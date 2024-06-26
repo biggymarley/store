@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      zIndex: {
+        fullTop: 999,
+        loader: 9999,
+      },
       colors: {
         primary: {
           50: "#eef2ff",

@@ -4,8 +4,10 @@ import MainRouter from "./mainRouter";
 import useFetchJson from "./useFetchJson";
 import bb from "./assets/bb.png";
 import useCart from "./useCartManagment";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Loader } from "./Loader";
+const url = "https://pymentserver.onrender.com";
+
 function App() {
   const { data, loading, error } = useFetchJson("/products.json");
   const [appLoading, setAppLoading] = useState(false);
@@ -20,6 +22,10 @@ function App() {
     removeNumProduct,
     addNumProduct,
   } = useCart();
+
+  useEffect(() => {
+    fetch(`${url}/api/`).then(async (r) => {});
+  }, []);
 
   return (
     <LoadingContext.Provider value={{ appLoading, setAppLoading }}>

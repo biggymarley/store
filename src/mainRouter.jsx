@@ -19,25 +19,121 @@ import Cart from "./catalog/Cart";
 import Billing from "./catalog/Billing";
 import Payment from "./catalog/Payment";
 import Success from "./catalog/Success";
+import ScrollToTop from "./ScrollTop";
 
 export default function MainRouter() {
   const router = createBrowserRouter([
-    { path: "/", element: <Home /> },
-    { path: "/contact-us", element: <Contactus /> },
-    { path: "/contact-information", element: <Contactusinfos /> },
-    { path: "/privacy-policy", element: <Privacypolicy /> },
-    { path: "/refund-policy", element: <Refund /> },
-    { path: "/shipping-policy", element: <Shipping /> },
-    { path: "/terms-of-service", element: <Tos /> },
-    { path: "/order-status", element: <OrderStatus /> },
-    { path: "/catalog/:id", element: <Product /> },
-    { path: "/cart", element: <Cart /> },
-    { path: "/billing", element: <Billing /> },
-    { path: "/payment", element: <Payment /> },
-    { path: "/success", element: <Success /> },
+    {
+      path: "/",
+      element: (
+        <ScrollToTop>
+          <Home />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/contact-us",
+      element: (
+        <ScrollToTop>
+          <Contactus />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/contact-information",
+      element: (
+        <ScrollToTop>
+          <Contactusinfos />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/privacy-policy",
+      element: (
+        <ScrollToTop>
+          <Privacypolicy />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/refund-policy",
+      element: (
+        <ScrollToTop>
+          <Refund />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/shipping-policy",
+      element: (
+        <ScrollToTop>
+          <Shipping />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/terms-of-service",
+      element: (
+        <ScrollToTop>
+          <Tos />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/order-status",
+      element: (
+        <ScrollToTop>
+          <OrderStatus />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/catalog/:id",
+      element: (
+        <ScrollToTop>
+          <Product />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/cart",
+      element: (
+        <ScrollToTop>
+          <Cart />{" "}
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/billing",
+      element: (
+        <ScrollToTop>
+          <Billing />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/payment",
+      element: (
+        <ScrollToTop>
+          <Payment />
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/success",
+      element: (
+        <ScrollToTop>
+          <Success />
+        </ScrollToTop>
+      ),
+    },
     {
       path: "/catalog",
-      element: <Catalog />,
+      element: (
+        <ScrollToTop>
+          <Catalog />
+        </ScrollToTop>
+      ),
     },
     { path: "*", element: <Navigate to="/" replace /> },
   ]);

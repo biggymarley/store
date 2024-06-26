@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { home } from "./data";
 export const Loader = () => {
@@ -8,7 +7,7 @@ export const Loader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed  w-screen h-screen bg-bg flex items-center justify-center flex-col gap-8 z-50"
+        className="fixed  w-screen h-screen bg-slate-900 flex items-center justify-center flex-col gap-8 z-50"
       >
         <img src={home.logo} className="w-[90px] rounded-full " />
         <BarLoader />
