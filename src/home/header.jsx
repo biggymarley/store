@@ -37,7 +37,11 @@ const GlassNavigation = () => {
 
 const Logo = () => (
   <div className="flex-grow md:flex-grow-0">
-    <h1 className="text-2xl text-white font-bold mr-4">{home.storeName}</h1>
+    <Link to="/">
+      <h1 className="text-2xl text-white font-bold mr-4 cursor-pointer">
+        {home.storeName}
+      </h1>
+    </Link>
   </div>
 );
 
