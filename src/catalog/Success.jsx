@@ -1,23 +1,45 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "../home/footer";
 import Header from "../home/header";
+import { ProuctsContext } from "../Context";
 
 export default function Success() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const paymentIntent = searchParams.get("payment_intent");
 
   useEffect(() => {
-    localStorage.removeItem("cart");
+    if (paymentIntent && paymentIntent.startsWith("pi")) {
+      localStorage.removeItem("cart");
+      sendEmail(localStorage.getItem("userEmail"));
+    }
     // const timer = setTimeout(() => {
     //   navigate("/");
     // }, 5000); // 5000 milliseconds = 5 seconds
 
     // // Clear the timeout if the component unmounts
     // return () => clearTimeout(timer);
-  }, []);
+  }, [paymentIntent]);
+
+  const sendEmail = async (email) => {
+    try {
+      const res = await fetch("http://localhost:5252/api/sendconfirmation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: email,
+        }),
+      });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
   return (
     <>

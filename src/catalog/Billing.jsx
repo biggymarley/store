@@ -10,7 +10,7 @@ import { userProfileValidation } from "../formik/formValidation";
 import { createUser } from "../firebase/userManagment";
 
 export default function Billing() {
-  const { total, cart } = useContext(ProuctsContext);
+  const { total, cart, setuserData } = useContext(ProuctsContext);
   const { setAppLoading } = useContext(LoadingContext);
   const navigate = useNavigate();
 
@@ -20,6 +20,7 @@ export default function Billing() {
     validateOnChange: false,
     onSubmit: (values) => {
       createUser(values, setAppLoading);
+      localStorage.setItem('userEmail', values.email);
       navigate("/payment");
     },
   });

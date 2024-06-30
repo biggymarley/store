@@ -11,6 +11,7 @@ const url = "https://pymentserver.onrender.com";
 function App() {
   const { data, loading, error } = useFetchJson("/products.json");
   const [appLoading, setAppLoading] = useState(false);
+  const [userData, setuserData] = useState(undefined);
 
   const {
     total,
@@ -37,6 +38,8 @@ function App() {
           error,
           cart,
           cartLength,
+          userData,
+          setuserData,
           addItem,
           removeItem,
           clearCart,
