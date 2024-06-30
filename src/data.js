@@ -25,10 +25,10 @@ import logo from "./assets/logo.png";
 
 const emailsup = `support@aquafeast.shop`;
 const emailcontact = `contact@aquafeast.shop`;
-const phone = `+44 752 960 2271`;
+const phone = `+1 752 347 9854`;
 const storename = `AquaFeast`;
-const address = `796 Fulham Road, London, SW6 5SL, United Kingdom`;
-export const priceTag = `£`;
+const address = `25 Arana Cir Sausalito, California(CA), United States`;
+export const priceTag = `$`;
 export const home = {
   storeName: storename,
   logo: logo,
