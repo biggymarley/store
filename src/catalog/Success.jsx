@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { url } from "../Context";
 import Footer from "../home/footer";
 import Header from "../home/header";
-import { ProuctsContext } from "../Context";
 
 export default function Success() {
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export default function Success() {
 
   const sendEmail = async (email) => {
     try {
-      const res = await fetch("http://localhost:5252/api/sendconfirmation", {
+      const res = await fetch(`${url}/api/sendconfirmation`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

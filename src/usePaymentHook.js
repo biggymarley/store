@@ -1,6 +1,7 @@
 import { loadStripe } from "@stripe/stripe-js";
 import React, { useEffect, useState } from "react";
-const url = "https://pymentserver.onrender.com";
+import { url } from "./Context";
+
 export default function usePaymentHook(total) {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
