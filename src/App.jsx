@@ -25,7 +25,7 @@ function App() {
   } = useCart();
 
   useEffect(() => {
-    fetch(`${url}/api/`).then(async (r) => {});
+    fetch(`${url}/api/`).then(async () => {});
   }, []);
 
   return (

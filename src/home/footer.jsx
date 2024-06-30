@@ -1,6 +1,7 @@
 import React from "react";
-import { home } from "../data";
 import { Link } from "react-router-dom";
+import { home } from "../data";
+import { Mastercard, Visa, Paypal } from "react-payment-logos/dist/flat";
 
 export default function Footer() {
   return (
@@ -16,9 +17,7 @@ export default function Footer() {
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   {item.subitems.map((it, index) => (
                     <li className="mb-4" key={index}>
-                      <Link to={it.path} >
-                        {it.name}
-                      </Link>
+                      <Link to={it.path}>{it.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -35,10 +34,16 @@ export default function Footer() {
             </a>
             . All Rights Reserved.
           </span>
+          <div  className="flex  gap-4">
+            {home.footer.subfooter.map((e, index) => (
+              <div key={index}>{<e.icon />}</div>
+            ))}
+            {/* <Mastercard /> */}
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-let now = new Date();
-let currentYear = now.getFullYear();
+// let now = new Date();
+let currentYear = "2023";

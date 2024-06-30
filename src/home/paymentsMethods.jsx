@@ -1,10 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import {
-    SiApplepay,
-    SiMastercard,
-    SiPaypal,
-    SiVisa
+  SiAmericanexpress,
+  SiMastercard,
+  SiVisa
 } from "react-icons/si";
 import { twMerge } from "tailwind-merge";
 
@@ -14,17 +13,14 @@ export const FoldingLogos = () => {
       <Copy />
       <LogoRolodex
         items={[
-          <LogoItem key={1} className="bg-blue-300 text-neutral-900">
-            <SiPaypal />
-          </LogoItem>,
           <LogoItem key={2} className="bg-orange-300 text-neutral-900">
             <SiMastercard />
           </LogoItem>,
           <LogoItem key={3} className="bg-gray-300 text-neutral-900">
             <SiVisa />
           </LogoItem>,
-          <LogoItem key={4} className="bg-white text-black">
-            <SiApplepay />
+          <LogoItem key={4} className="bg-blue-400 text-black">
+            <SiAmericanexpress />
           </LogoItem>,
         ]}
       />

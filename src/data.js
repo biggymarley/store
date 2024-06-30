@@ -22,12 +22,18 @@ import {
 } from "react-icons/si";
 import hero from "./assets/hero.jpeg";
 import logo from "./assets/logo.png";
+import {
+  Amex,
+  Mastercard,
+  Unionpay,
+  Visa,
+} from "react-payment-logos/dist/flat";
 
 const emailsup = `support@aquafeast.shop`;
 const emailcontact = `contact@aquafeast.shop`;
 const phone = `+1 752 347 9854`;
 const storename = `AquaFeast`;
-const address = `25 Arana Cir Sausalito, California(CA), United States`;
+const address = `25 Arana Cir, Sausalito, CA 94965, United States`;
 export const priceTag = `$`;
 export const home = {
   storeName: storename,
@@ -102,8 +108,7 @@ export const home = {
       path: `../products`,
       className: `col-span-12 md:col-span-4`,
       bg: `bg-gradient-to-br from-violet-400 to-indigo-400`,
-      description:
-        `<img src='https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
+      description: `<img src='https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
       // image: `https://via.placeholder.com/300x300`,
     },
     {
@@ -112,8 +117,7 @@ export const home = {
       className: `col-span-12 md:col-span-4`,
       path: `../products`,
       bg: `bg-gradient-to-br from-amber-400 to-orange-400`,
-      description:
-        `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
+      description: `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
       // image: `https://via.placeholder.com/300x300`,
     },
     {
@@ -122,8 +126,7 @@ export const home = {
       className: `col-span-12 md:col-span-4`,
       path: `../products`,
       bg: `bg-gradient-to-br from-cyan-400 to-violet-400`,
-      description:
-        `<img src='https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
+      description: `<img src='https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
       // image: `https://via.placeholder.com/300x300`,
     },
   ],
@@ -134,8 +137,7 @@ export const home = {
       price: `£22.95`,
       bg: `bg-gradient-to-br from-green-400 to-emerald-400`,
       path: `../products`,
-      description:
-        `<img src='https://i.ibb.co/pWp4HY7/fish-flucon-30-ct-8-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
+      description: `<img src='https://i.ibb.co/pWp4HY7/fish-flucon-30-ct-8-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
       // image: `https://via.placeholder.com/300x300`,
     },
     {
@@ -145,8 +147,7 @@ export const home = {
 
       className: `col-span-12 md:col-span-4`,
       bg: `bg-gradient-to-br  from-pink-400 to-red-400`,
-      description:
-        `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
+      description: `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
       // image: `https://via.placeholder.com/300x300`,
     },
     {
@@ -156,8 +157,7 @@ export const home = {
 
       className: `col-span-12 md:col-span-4`,
       bg: `bg-gradient-to-br  from-red-400 to-orange-400`,
-      description:
-        `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
+      description: `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
       // image: `https://via.placeholder.com/300x300`,
     },
   ],
@@ -188,15 +188,13 @@ export const home = {
     },
     {
       tempId: 4,
-      testimonial:
-        `If I could give 11 stars, I'd give 12. Best fish food ever!`,
+      testimonial: `If I could give 11 stars, I'd give 12. Best fish food ever!`,
       by: `Andre`,
       imgSrc: `https://randomuser.me/api/portraits/men/87.jpg`,
     },
     {
       tempId: 5,
-      testimonial:
-        `So happy we found this fish food! Our tank has never been cleaner.`,
+      testimonial: `So happy we found this fish food! Our tank has never been cleaner.`,
       by: `Marina`,
       imgSrc: `https://randomuser.me/api/portraits/women/88.jpg`,
     },
@@ -208,8 +206,7 @@ export const home = {
     },
     {
       tempId: 7,
-      testimonial:
-        `Would be lost without this fish food. The ROI is easily 100X for us.`,
+      testimonial: `Would be lost without this fish food. The ROI is easily 100X for us.`,
       by: `Daniela`,
       imgSrc: `https://randomuser.me/api/portraits/women/90.jpg`,
     },
@@ -221,22 +218,19 @@ export const home = {
     },
     {
       tempId: 9,
-      testimonial:
-        `I switched 5 years ago and never looked back. Excellent product!`,
+      testimonial: `I switched 5 years ago and never looked back. Excellent product!`,
       by: `Sofie`,
       imgSrc: `https://randomuser.me/api/portraits/women/92.jpg`,
     },
     {
       tempId: 10,
-      testimonial:
-        `I've been searching for great fish food for years. So glad I found this one!`,
+      testimonial: `I've been searching for great fish food for years. So glad I found this one!`,
       by: `Pete`,
       imgSrc: `https://randomuser.me/api/portraits/men/93.jpg`,
     },
     {
       tempId: 11,
-      testimonial:
-        `It's so simple and intuitive, even my kids can feed the fish with it.`,
+      testimonial: `It's so simple and intuitive, even my kids can feed the fish with it.`,
       by: `Marina`,
       imgSrc: `https://randomuser.me/api/portraits/women/94.jpg`,
     },
@@ -273,6 +267,24 @@ export const home = {
           { name: `☏ ${phone}`, path: `/contact-us` },
           { name: `✉️ ${emailcontact}`, path: `/contact-us` },
         ],
+      },
+    ],
+    subfooter: [
+      {
+        label: "ms",
+        icon: Mastercard,
+      },
+      {
+        label: "ms",
+        icon: Visa,
+      },
+      {
+        label: "ms",
+        icon: Amex,
+      },
+      {
+        label: "ms",
+        icon: Unionpay,
       },
     ],
   },
@@ -459,39 +471,32 @@ export const home = {
 export const productsData = [
   {
     id: `A1B2C3D4E5F6`,
-    productName:
-      `Fish Sulfa Forte - Sulfamethoxazole 800 mg, Trimethoprim 160 mg Tablets (30 Count)`,
+    productName: `Fish Sulfa Forte - Sulfamethoxazole 800 mg, Trimethoprim 160 mg Tablets (30 Count)`,
     price: `£69.95`,
-    image:
-      `https://${storename}.myshopify.com/cdn/shop/files/SUL_360x.png?v=1718923423`,
+    image: `https://${storename}.myshopify.com/cdn/shop/files/SUL_360x.png?v=1718923423`,
   },
   {
     id: `G7H8I9J0K1L2`,
-    productName:
-      `Fish sulfa forte Sulfamethoxazole /Trimethoprim 800mg 100 count`,
+    productName: `Fish sulfa forte Sulfamethoxazole /Trimethoprim 800mg 100 count`,
     price: `£69.95`,
-    image:
-      `https://${storename}.myshopify.com/cdn/shop/files/sulfa-1001_360x.jpg?v=1718923468`,
+    image: `https://${storename}.myshopify.com/cdn/shop/files/sulfa-1001_360x.jpg?v=1718923468`,
   },
   {
     id: `M3N4O5P6Q7R8`,
     productName: `fish zithro azithromycin 30 tablets`,
     price: `£69.95`,
-    image:
-      `https://${storename}.myshopify.com/cdn/shop/files/aquariumazithromycin30_360x.jpg?v=1718923396`,
+    image: `https://${storename}.myshopify.com/cdn/shop/files/aquariumazithromycin30_360x.jpg?v=1718923396`,
   },
   {
     id: `S9T0U1V2W3X4`,
     productName: `Fish Zole Forte - Metronidazole 500 mg (60 Count)`,
     price: `£89.99`,
-    image:
-      `https://${storename}.myshopify.com/cdn/shop/files/MET30_0a140cf4-8dd9-4856-a085-e9211a0df7ea_360x.png?v=1718923360`,
+    image: `https://${storename}.myshopify.com/cdn/shop/files/MET30_0a140cf4-8dd9-4856-a085-e9211a0df7ea_360x.png?v=1718923360`,
   },
   {
     id: `Y5Z6A7B8C9D0`,
     productName: `fish zole forte - Metronidazole 500 mg 100 Tablets`,
     price: `£89.95`,
-    image:
-      `https://${storename}.myshopify.com/cdn/shop/files/metronidazole-500-100pak_360x.jpg?v=1718923462`,
+    image: `https://${storename}.myshopify.com/cdn/shop/files/metronidazole-500-100pak_360x.jpg?v=1718923462`,
   },
 ];
