@@ -27,7 +27,7 @@ export default function Product() {
     navigate("/cart");
   };
 
-  const fetchdata = () => {
+  const fetchdata = (data) => {
     const res = data?.filter((p) => p.Handle == id);
     if (res && res.length > 0) setProduct({ ...res[0] });
     else {
@@ -36,13 +36,13 @@ export default function Product() {
     }
   };
   useEffect(() => {
-    fetchdata();
-  }, []);
+    if (data && data.length > 0) fetchdata(data);
+  }, [data]);
 
   return (
     <>
       <Header />
-      
+
       <div className="h-60" />
       <section className="relative  min-h-screen flex items-center ">
         <div className="w-full mx-auto px-4 overflow-hidden sm:px-6 lg:px-0 bg-slate-800 max-w-6xl rounded-md">
