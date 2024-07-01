@@ -31,7 +31,7 @@ import {
 
 const emailsup = `support@aquafeast.shop`;
 const emailcontact = `contact@aquafeast.shop`;
-const phone = `+1 752 347 9854`;
+const phone = `+1 984 362 0416`;
 const storename = `AquaFeast`;
 const address = `25 Arana Cir, Sausalito, CA 94965, United States`;
 export const priceTag = `$`;
