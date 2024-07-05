@@ -109,8 +109,9 @@ const Content = () => {
           ease: "easeInOut",
         }}
         className="mb-3 text-center text-3xl font-bold leading-tight text-zinc-50 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
+        dangerouslySetInnerHTML={{ __html: home.hero.title }}
       >
-        {home.hero.title}
+        {/* {home.hero.title} */}
       </motion.h1>
       <motion.p
         initial={{

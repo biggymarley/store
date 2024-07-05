@@ -9,7 +9,17 @@ import { Loader } from "./Loader";
 const url = "https://pymentserver.onrender.com";
 
 function App() {
-  const { data, loading, error } = useFetchJson("/products.json");
+  const {
+    data,
+    displayData,
+    loading,
+    error,
+    currentPage,
+    totalPages,
+    nextPage,
+    previousPage,
+    goToPage,
+  } = useFetchJson("/products.json");
   const [appLoading, setAppLoading] = useState(false);
   const [userData, setuserData] = useState(undefined);
 
@@ -32,8 +42,9 @@ function App() {
     <LoadingContext.Provider value={{ appLoading, setAppLoading }}>
       <ProuctsContext.Provider
         value={{
-          total,
           data,
+          total,
+          displayData,
           loading,
           error,
           cart,
@@ -45,6 +56,11 @@ function App() {
           clearCart,
           removeNumProduct,
           addNumProduct,
+          currentPage,
+          totalPages,
+          nextPage,
+          previousPage,
+          goToPage,
         }}
       >
         {appLoading ? (

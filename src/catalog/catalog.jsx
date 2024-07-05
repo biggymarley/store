@@ -7,7 +7,14 @@ import { priceTag } from "../data";
 
 export default function Catalog() {
   const navigate = useNavigate();
-  const { data, loading, error } = useContext(ProuctsContext);
+  const {
+    displayData,
+    currentPage,
+    totalPages,
+    nextPage,
+    previousPage,
+    goToPage,
+  } = useContext(ProuctsContext);
   return (
     <>
       <Header />
@@ -18,7 +25,7 @@ export default function Catalog() {
           <h2 className="sr-only">Products</h2>
 
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {data?.map((product, index) => (
+            {displayData?.map((product, index) => (
               <div
                 onClick={() => navigate(`/catalog/${product.Handle}`)}
                 className="flex flex-col shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
@@ -52,6 +59,36 @@ export default function Catalog() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="w-full flex justify-center">
+        <nav>
+          <ul className="inline-flex -space-x-px text-sm list-none">
+            <li onClick={previousPage}>
+              <span className="cursor-pointer flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">
+                Previous
+              </span>
+            </li>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <li key={index} onClick={() => goToPage(index + 1)}>
+                <span
+                  className={`cursor-pointer flex items-center justify-center px-3 h-8 leading-tight  border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ${
+                    index + 1 === currentPage
+                      ? "text-white bg-indigo-600"
+                      : "text-gray-600 bg-white "
+                  } `}
+                >
+                  {index + 1}
+                </span>
+              </li>
+            ))}
+
+            <li onClick={nextPage}>
+              <span className="cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">
+                Next
+              </span>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div className="h-20" />
       <Footer />

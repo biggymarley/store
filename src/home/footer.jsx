@@ -14,7 +14,7 @@ export default function Footer() {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   {item.head}
                 </h2>
-                <ul className="text-slate-300  font-medium">
+                <ul className="text-slate-300  font-medium list-none m-0">
                   {item.subitems.map((it, index) => (
                     <li className="mb-4" key={index}>
                       <Link to={it.path}>{it.name}</Link>

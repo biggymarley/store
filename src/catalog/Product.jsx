@@ -105,6 +105,7 @@ export default function Product() {
                       type="text"
                       value={count}
                       // onChange={(e) => setcount(e.target.value)}
+                      readOnly
                       className="font-semibold text-black cursor-pointer text-lg py-5 px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-black text-center "
                       placeholder="1"
                     />

@@ -29,10 +29,10 @@ import {
   Visa,
 } from "react-payment-logos/dist/flat";
 
-const emailsup = `support@aquafeast.shop`;
-const emailcontact = `contact@aquafeast.shop`;
+const storename = `Deals4Deals`;
+const emailsup = `support@${storename.toLowerCase()}.shop`;
+const emailcontact = `contact@${storename.toLowerCase()}.shop`;
 const phone = `+1 984 362 0416`;
-const storename = `AquaFeast`;
 const address = `25 Arana Cir, Sausalito, CA 94965, United States`;
 export const imageTagname = "Variant Image";
 export const priceTag = `$`;
@@ -69,8 +69,8 @@ export const home = {
   ],
   hero: {
     heroimg: hero,
-    title: `Premium Tank Fish Food for Healthy & Vibrant Fish`,
-    description: `Welcome to ${storename} Fish Food, your trusted source for high-quality tank fish food designed to keep your aquatic pets thriving. Our specially formulated fish food supports optimal growth, vibrant colors, and robust health, ensuring your fish live a long and happy life. Whether you have tropical fish, goldfish, or exotic species, our products cater to all dietary needs. Dive into a world where your fish's health is our top priority. Shop now and give your fish the nutrition they deserve!`,
+    title: `Biggest Q4 Clearance Sale - Up to <span class="text-red-500">70%</span> Off!`,
+    description: `Discover incredible deals at ${storename}! As we clear out our inventory for the new year, enjoy discounts of up to 70% on almost everything in the store. Don't miss out on these limited-time offers – shop now and save big!`,
     button: {
       name: `Shop Now`,
       path: `/catalog`,
@@ -102,66 +102,6 @@ export const home = {
       SiNike,
     ],
   },
-  productstop: [
-    {
-      name: `Fish Mox Forte™ - Amoxicillin 500 mg 100 Count`,
-      price: `£52.95`,
-      path: `../products`,
-      className: `col-span-12 md:col-span-4`,
-      bg: `bg-gradient-to-br from-violet-400 to-indigo-400`,
-      description: `<img src='https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
-      // image: `https://via.placeholder.com/300x300`,
-    },
-    {
-      name: `Fish Mox Forte™ - Amoxicillin 500 mg 100 Count`,
-      price: `£52.95`,
-      className: `col-span-12 md:col-span-4`,
-      path: `../products`,
-      bg: `bg-gradient-to-br from-amber-400 to-orange-400`,
-      description: `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
-      // image: `https://via.placeholder.com/300x300`,
-    },
-    {
-      name: `Fish Mox Forte™ - Amoxicillin 500 mg 100 Count`,
-      price: `£62.95`,
-      className: `col-span-12 md:col-span-4`,
-      path: `../products`,
-      bg: `bg-gradient-to-br from-cyan-400 to-violet-400`,
-      description: `<img src='https://i.ibb.co/SfBDHB0/IMG-1881-608x832-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
-      // image: `https://via.placeholder.com/300x300`,
-    },
-  ],
-  productsbottom: [
-    {
-      name: `Fish Mox Forte™ - Amoxicillin 500 mg 100 Count`,
-      className: `col-span-12 md:col-span-4`,
-      price: `£22.95`,
-      bg: `bg-gradient-to-br from-green-400 to-emerald-400`,
-      path: `../products`,
-      description: `<img src='https://i.ibb.co/pWp4HY7/fish-flucon-30-ct-8-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
-      // image: `https://via.placeholder.com/300x300`,
-    },
-    {
-      price: `£52.95`,
-      name: `Fish Mox Forte™ - Amoxicillin 500 mg 100 Count`,
-      path: `../products`,
-
-      className: `col-span-12 md:col-span-4`,
-      bg: `bg-gradient-to-br  from-pink-400 to-red-400`,
-      description: `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
-      // image: `https://via.placeholder.com/300x300`,
-    },
-    {
-      price: `£52.95`,
-      name: `Fish Mox Forte™ - Amoxicillin 500 mg 100 Count`,
-      path: `../products`,
-
-      className: `col-span-12 md:col-span-4`,
-      bg: `bg-gradient-to-br  from-red-400 to-orange-400`,
-      description: `<img src='https://i.ibb.co/C5twKH3/19228-2-removebg-preview.png' style='float: left; height:150px' /><p>Treat various fish issues effectively with Fish Mox Forte Antibiotic Capsules. Specifically designed for ornamental fish, these capsules help address eye infections, fin rot, and more. Easy to use and safe for aquarium environments.</p> <ul> <li>For ornamental fish health</li> <li>Easy-to-administer capsules</li> <li>Suitable for various fish ailments</li> <li>Safe and effective</li> </ul> <p>Note: Intended for ornamental fish use only.</p>`,
-      // image: `https://via.placeholder.com/300x300`,
-    },
-  ],
   rating: [
     {
       tempId: 0,
@@ -250,7 +190,7 @@ export const home = {
       {
         head: `OUR POLICY`,
         subitems: [
-          { name: `Search`, path: `/catalog` },
+          // { name: `Search`, path: `/catalog` },
           { name: `Contact Information`, path: `/contact-information` },
           { name: `Privacy Policy`, path: `/privacy-policy` },
           { name: `Refund Policy`, path: `/refund-policy` },
