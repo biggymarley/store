@@ -78,10 +78,10 @@ export default function Product() {
                       <BsStarFill color="#FBBF24" />
                       <BsStarFill color="#FBBF24" />
                       <BsStarFill color="#FBBF24" />
-                      <BsStarFill color="#F3F4F6" />
+                      <BsStarFill color="#9f9f9f" />
                     </div>
-                    <span className="pl-2 font-normal leading-7 text-gray-100 text-sm ">
-                      1624 review
+                    <span className="pl-2 font-normal leading-7 text-gray-900 text-sm ">
+                      {Math.floor(Math.random() * (2574 - 148 + 1)) + 148} review
                     </span>
                   </div>
                 </div>
