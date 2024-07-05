@@ -214,14 +214,14 @@ export default function Cart() {
                 {cart && cart.length > 0 ? (
                   <Link
                     to="/billing"
-                    className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    className="flex w-full items-center justify-center rounded-lg bg-indigo-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
                   >
                     Proceed to Checkout
                   </Link>
                 ) : (
                   <button
                     disabled={true}
-                    className="flex w-full items-center justify-center rounded-lg bg-primary-700/50 px-5 py-2.5 text-sm font-medium text-white  focus:outline-none focus:ring-4 focus:ring-primary-300 "
+                    className="flex w-full items-center justify-center rounded-lg bg-indigo-700/50 px-5 py-2.5 text-sm font-medium text-white  focus:outline-none focus:ring-4 focus:ring-primary-300 "
                   >
                     Proceed to Checkout
                   </button>
@@ -235,7 +235,7 @@ export default function Cart() {
                   <Link
                     to="/catalog"
                     title=""
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-indigo-500"
                   >
                     Continue Shopping
                     <svg

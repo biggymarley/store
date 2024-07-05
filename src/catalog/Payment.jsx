@@ -24,7 +24,7 @@ export default function Payment() {
       <div className="h-20" />
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           <ol className="items-center flex w-full max-w-2xl text-center text-sm font-medium text-slate-900  sm:text-base">
-            <li className="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-primary-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
+            <li className="after:border-1 flex items-center text-indigo-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-indigo-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
               <span className="flex items-center after:mx-2 after:text-slate-900 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
                 <svg
                   className="me-2 h-4 w-4 sm:h-5 sm:w-5"
@@ -46,7 +46,7 @@ export default function Payment() {
                 Cart
               </span>
             </li>
-            <li className="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-primary-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
+            <li className="after:border-1 flex items-center text-indigo-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-indigo-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
               <span className="flex items-center after:mx-2 after:text-slate-900 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
                 <svg
                   className="me-2 h-4 w-4 sm:h-5 sm:w-5"
@@ -68,7 +68,7 @@ export default function Payment() {
                 Billing
               </span>
             </li>
-            <li className="flex shrink-0 items-center text-primary-500">
+            <li className="flex shrink-0 items-center text-indigo-500">
               <svg
                 className="me-2 h-4 w-4 sm:h-5 sm:w-5"
                 aria-hidden="true"

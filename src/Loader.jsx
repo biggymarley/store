@@ -7,9 +7,16 @@ export const Loader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed  w-screen h-screen bg-indigo-600 flex items-center justify-center flex-col gap-8 z-50"
+        className="fixed  w-screen h-screen bg-indigo-800/40 backdrop-blur-md flex items-center justify-center flex-col gap-8 z-50"
       >
-        <h1 className="text-2xl text-white font-bold mr-4">{home.storeName}</h1>
+        {home.logo ? (
+          <img src={home.logo} className="h-32" />
+        ) : (
+          <h1 className="text-2xl text-indigo-500 font-bold mr-4">
+            {home.storeName}
+          </h1>
+        )}
+
         <BarLoader />
       </motion.div>
     </div>

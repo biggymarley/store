@@ -22,6 +22,17 @@ export default {
           900: "#312e81",
           950: "#1e1b4b",
         },
+        indigo: {
+          100: "#D2E6F9",
+          200: "#A6CDF3",
+          300: "#79B4ED",
+          400: "#4D9BE7",
+          500: "#347FDA", // This is your desired color
+          600: "#2864B1",
+          700: "#1B4888",
+          800: "#0D2C5F",
+          900: "#001036",
+        },
       },
     },
     fontFamily: {

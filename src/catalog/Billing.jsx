@@ -35,7 +35,7 @@ export default function Billing() {
       <section className="py-8 antialiased   backdrop-blur md:py-16 relative z-10">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           <ol className="items-center flex w-full max-w-2xl text-center text-sm font-medium text-slate-900  sm:text-base">
-            <li className="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-primary-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
+            <li className="after:border-1 flex items-center text-indigo-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-indigo-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
               <span className="flex items-center after:mx-2 after:text-slate-900 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
                 <svg
                   className="me-2 h-4 w-4 sm:h-5 sm:w-5"
@@ -57,7 +57,7 @@ export default function Billing() {
                 Cart
               </span>
             </li>
-            <li className="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-primary-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
+            <li className="after:border-1 flex items-center text-indigo-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-indigo-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
               <span className="flex items-center after:mx-2 after:text-slate-900 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
                 <svg
                   className="me-2 h-4 w-4 sm:h-5 sm:w-5"
@@ -122,7 +122,7 @@ export default function Billing() {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.firstName}
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder="Bonnie"
                       required=""
                     />
@@ -147,7 +147,7 @@ export default function Billing() {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.lastName}
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder="Green"
                       required=""
                     />
@@ -168,7 +168,7 @@ export default function Billing() {
                     <input
                       type="email"
                       id="your_email"
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder="name@flowbite.com"
                       required=""
                       name="email"
@@ -778,7 +778,7 @@ export default function Billing() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.num}
-                            className="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                            className="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             placeholder="123-456-7890"
                             required=""
@@ -803,7 +803,7 @@ export default function Billing() {
                     <input
                       type="text"
                       id="Address"
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder=""
                       required=""
                       name="address"
@@ -829,7 +829,7 @@ export default function Billing() {
                       type="text"
                       id="Zip"
                       name="zip"
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder="90001"
                       required=""
                       onChange={formik.handleChange}
@@ -853,7 +853,7 @@ export default function Billing() {
                     <input
                       type="text"
                       id="country"
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder="USA"
                       required=""
                       name="country"
@@ -878,7 +878,7 @@ export default function Billing() {
                     <input
                       type="text"
                       id="city"
-                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 "
+                      className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500 "
                       placeholder="LA"
                       required=""
                       name="city"
@@ -933,7 +933,7 @@ export default function Billing() {
                 <button
                   onClick={() => formik.handleSubmit()}
                   type="submit"
-                  className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  className="flex w-full items-center justify-center rounded-lg bg-indigo-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-indigo-800 focus:outline-none focus:ring-4  focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800"
                 >
                   Proceed to Payment
                 </button>
