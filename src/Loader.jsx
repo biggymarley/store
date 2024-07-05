@@ -7,7 +7,7 @@ export const Loader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed  w-screen h-screen bg-slate-900 flex items-center justify-center flex-col gap-8 z-50"
+        className="fixed  w-screen h-screen bg-indigo-600 flex items-center justify-center flex-col gap-8 z-50"
       >
         <h1 className="text-2xl text-white font-bold mr-4">{home.storeName}</h1>
         <BarLoader />

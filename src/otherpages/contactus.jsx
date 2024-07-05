@@ -6,22 +6,22 @@ export default function Contactus() {
   return (
     <>
       <Header />
-      <div className="h-60" />
-      <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto min-h-[50vh] bg-slate-900/60 backdrop-blur-xl font-[sans-serif] max-w-6xl relative z-1" >
+      <div className="h-20" />
+      <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto min-h-[50vh]  backdrop-blur-xl font-[sans-serif] max-w-6xl relative z-1" >
         <div className="flex flex-col justify-center h-full">
-          <h1 className="text-white text-3xl font-extrabold">Contact Us</h1>
+          <h1 className="text-black text-3xl font-extrabold">Contact Us</h1>
           <div className="flex flex-col gap-3">
-            <p className="text-sm text-gray-300 mt-4">{home.contactus.title}</p>
-            <p className="text-sm text-gray-300">{home.contactus.adrs}</p>
-            <p className="text-sm text-gray-300">{home.contactus.phonetitle}</p>
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-gray-800 mt-4">{home.contactus.title}</p>
+            <p className="text-sm text-gray-800">{home.contactus.adrs}</p>
+            <p className="text-sm text-gray-800">{home.contactus.phonetitle}</p>
+            <p className="text-sm text-gray-800">
               {home.contactus.phonesubtitle}
             </p>
-            <p className="text-sm text-gray-300"> {home.contactus.phone}</p>
+            <p className="text-sm text-gray-800"> {home.contactus.phone}</p>
           </div>
           <div className="mt-12">
-            <h2 className="text-gray-200 text-base font-bold">Email</h2>
-            <ul className="mt-4">
+            <h2 className="text-slate-900 text-base font-bold">Email</h2>
+            <ul className="m-0 mt-4 ">
               <li className="flex items-center">
                 <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                   <svg
@@ -39,7 +39,7 @@ export default function Contactus() {
                 </div>
                 <a
                   href="javascript:void(0)"
-                  className="text-gray-200 text-sm ml-4"
+                  className="text-slate-900 text-sm ml-4"
                 >
                   <small className="block">Mail</small>
                   <strong>{home.contactus.email}</strong>
@@ -52,26 +52,26 @@ export default function Contactus() {
           <input
             type="text"
             placeholder="Name"
-            className="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 "
+            className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 "
+            className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
           />
           <input
             type="text"
             placeholder="Subject"
-            className="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 "
+            className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
           />
           <textarea
             placeholder="Message"
             rows="6"
-            className="w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-blue-500 "
+            className="w-full rounded-md px-4 bg-gray-100 text-slate-900 text-sm pt-3 outline-blue-500 "
           ></textarea>
           <button
             type="button"
-            className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
+            className="text-black bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
           >
             Send
           </button>

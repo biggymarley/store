@@ -5,7 +5,7 @@ import { Mastercard, Visa, Paypal } from "react-payment-logos/dist/flat";
 
 export default function Footer() {
   return (
-    <footer className=" relative z-1 backdrop-blur-xl bg-slate-900/70 ">
+    <footer className=" relative z-1 backdrop-blur-xl bg-indigo-600 mt-auto">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between flex-col gap-8">
           <div className="grid grid-cols-2 gap-1 sm:grid-cols-3">
@@ -14,7 +14,7 @@ export default function Footer() {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   {item.head}
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-slate-300  font-medium">
                   {item.subitems.map((it, index) => (
                     <li className="mb-4" key={index}>
                       <Link to={it.path}>{it.name}</Link>

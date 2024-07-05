@@ -23,14 +23,14 @@ export const Products = () => {
             delay: 0.25,
             ease: "easeInOut",
           }}
-          className="max-w-lg text-4xl font-bold md:text-5xl text-slate-100"
+          className="max-w-lg text-4xl font-bold md:text-5xl text-slate-900"
         >
           Top Selling:
           <span className="text-slate-400"> Must-Have Featured Products</span>
         </motion.h2>
         <Link
           to="/catalog"
-          className="whitespace-nowrap rounded-lg bg-slate-900 px-4 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700"
+          className="whitespace-nowrap rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700"
         >
           Explore More
         </Link>

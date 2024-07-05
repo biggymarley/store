@@ -44,7 +44,7 @@ export default function Success() {
   return (
     <>
       <Header />
-      <div className="h-60" />
+      <div className="h-20" />
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0 }}
@@ -55,21 +55,21 @@ export default function Success() {
         >
           <div className="pt-16">
             <div className="flex flex-col gap-2 items-center">
-              <p className="text-2xl font-semibold text-center text-white">
+              <p className="text-2xl font-semibold text-center text-black">
                 Congratulations!
               </p>
-              <p className="text-xl font-regular text-center text-white">
+              <p className="text-xl font-regular text-center text-black">
                 Your payment was successfully processed. Thank you for your
                 purchase
               </p>
-              <p className="text-xl font-regular text-center text-white">
+              <p className="text-xl font-regular text-center text-black">
                 We will send you the tracking number once the product is
                 shipped, which will take 1 to 2 days.
               </p>
               <FaCheckCircle className="w-[150px] h-[150px] font-semibold text-center text-green-400" />
               <Link to="/catalog">
-                <button className="mt-8 flex items-center text-white">
-                  <FaArrowLeft className="mr-2 text-white" />
+                <button className="mt-8 flex items-center text-black">
+                  <FaArrowLeft className="mr-2 text-black" />
                   Return to Catalog
                 </button>
               </Link>
@@ -80,7 +80,7 @@ export default function Success() {
           </div>
         </motion.div>
       </AnimatePresence>
-      <div className="h-60" />
+      <div className="h-20" />
 
       <Footer />
     </>

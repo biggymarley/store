@@ -53,11 +53,11 @@ function App() {
           </div>
         ) : null}
         <Toaster richColors position="top-center" />
-        <div className="bg-slate-900 w-full min-h-screen overflow-hidden relative">
-          <div
+        <div className="bg-white w-full min-h-screen  relative flex flex-col">
+          {/* <div
             src={bb}
             className={`absolute bg-[url(./assets/bb.png)] w-screen h-full opacity-30 blur-sm z-0`}
-          />
+          /> */}
           <MainRouter />
         </div>
       </ProuctsContext.Provider>

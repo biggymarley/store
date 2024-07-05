@@ -16,7 +16,7 @@ export const Hero = () => {
           <img src={home.hero.heroimg} className="w-screen h-full object-cover blur-sm" />
         </div>
       </div>
-      <Beams />
+      {/* <Beams /> */}
       {/* <Brands /> */}
     </section>
   );
@@ -163,7 +163,7 @@ const SplashButton = ({ children, className, ...rest }) => {
     <Link
       to={rest.path}
       className={twMerge(
-        "rounded-md bg-gradient-to-br from-blue-400 to-blue-700 px-4 py-2 text-zinc-50 ring-2 ring-blue-500/50 ring-offset-2 ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-blue-500/70",
+        "rounded-md bg-gradient-to-br from-indigo-400 to-indigo-700 px-4 py-2 text-zinc-50 ring-2 ring-indigo-500/50 ring-offset-2 ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-blue-500/70",
         className
       )}
       {...rest}

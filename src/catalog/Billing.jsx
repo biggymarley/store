@@ -31,12 +31,12 @@ export default function Billing() {
   return (
     <>
       <Header />
-      <div className="h-40" />
-      <section className="bg-white py-8 antialiased dark:bg-gray-900/60 backdrop-blur md:py-16 relative z-10">
+      {/* <div className="h-40" /> */}
+      <section className="py-8 antialiased   backdrop-blur md:py-16 relative z-10">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-          <ol className="items-center flex w-full max-w-2xl text-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base">
+          <ol className="items-center flex w-full max-w-2xl text-center text-sm font-medium text-slate-900  sm:text-base">
             <li className="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-primary-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
-              <span className="flex items-center after:mx-2 after:text-gray-200 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
+              <span className="flex items-center after:mx-2 after:text-slate-900 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
                 <svg
                   className="me-2 h-4 w-4 sm:h-5 sm:w-5"
                   aria-hidden="true"
@@ -58,7 +58,7 @@ export default function Billing() {
               </span>
             </li>
             <li className="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-gray-200 dark:text-primary-500 dark:after:border-gray-700 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
-              <span className="flex items-center after:mx-2 after:text-gray-200 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
+              <span className="flex items-center after:mx-2 after:text-slate-900 after:content-['/'] dark:after:text-gray-500 sm:after:hidden">
                 <svg
                   className="me-2 h-4 w-4 sm:h-5 sm:w-5"
                   aria-hidden="true"
@@ -103,7 +103,7 @@ export default function Billing() {
           <div className="mt-6 sm:mt-8 lg:flex lg:items-center lg:gap-12 xl:gap-16">
             <div className="min-w-0 flex-1 space-y-8">
               <div className="space-y-4">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-black">
                   Delivery Details
                 </h2>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 bg-white p-4 rounded">
@@ -313,13 +313,13 @@ export default function Billing() {
                           className="z-10 hidden w-56 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
                         >
                           <ul
-                            className="p-2 text-sm font-medium text-gray-700 dark:text-gray-200"
+                            className="p-2 text-sm font-medium text-gray-700 dark:text-slate-900"
                             aria-labelledby="dropdown-phone-button-2"
                           >
                             <li>
                               <button
                                 type="button"
-                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-black"
                                 role="menuitem"
                               >
                                 <span className="inline-flex items-center">
@@ -424,7 +424,7 @@ export default function Billing() {
                             <li>
                               <button
                                 type="button"
-                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-black"
                                 role="menuitem"
                               >
                                 <span className="inline-flex items-center">
@@ -489,7 +489,7 @@ export default function Billing() {
                             <li>
                               <button
                                 type="button"
-                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-black"
                                 role="menuitem"
                               >
                                 <span className="inline-flex items-center">
@@ -585,7 +585,7 @@ export default function Billing() {
                             <li>
                               <button
                                 type="button"
-                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-black"
                                 role="menuitem"
                               >
                                 <span className="inline-flex items-center">
@@ -712,7 +712,7 @@ export default function Billing() {
                             <li>
                               <button
                                 type="button"
-                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-black"
                                 role="menuitem"
                               >
                                 <span className="inline-flex items-center">
@@ -899,16 +899,16 @@ export default function Billing() {
               <div className="flow-root">
                 <div className="-my-3 divide-y divide-gray-200 dark:divide-gray-800">
                   <dl className="flex items-center justify-between gap-4 py-3">
-                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <dt className="text-base font-normal text-slate-900 ">
                       Total originale
                     </dt>
-                    <dd className="text-base font-medium text-gray-900 dark:text-white">
+                    <dd className="text-base font-medium text-gray-900 dark:text-black">
                       {priceTag}
                       {total.originalPrice.toFixed(2)}
                     </dd>
                   </dl>
                   <dl className="flex items-center justify-between gap-4 py-3">
-                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <dt className="text-base font-normal text-slate-900 ">
                       Savings
                     </dt>
                     <dd className="text-base font-medium text-green-500">
@@ -919,10 +919,10 @@ export default function Billing() {
                   </dl>
 
                   <dl className="flex items-center justify-between gap-4 py-3">
-                    <dt className="text-base font-bold text-gray-900 dark:text-white">
+                    <dt className="text-base font-bold text-gray-900 dark:text-black">
                       Total
                     </dt>
-                    <dd className="text-base font-bold text-gray-900 dark:text-white">
+                    <dd className="text-base font-bold text-gray-900 dark:text-black">
                       {priceTag}
                       {total.total.toFixed(2)}
                     </dd>

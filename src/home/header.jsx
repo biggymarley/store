@@ -21,8 +21,8 @@ const GlassNavigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="z-50		 glass-nav fixed left-0 right-0 top-0  mx-auto max-w-6xl  overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-black/100 to-black/20  md:left-6 md:right-6 md:top-6 md:rounded-2xl">
-      <StickyCountdown />
+    <nav className="z-50		 glass-nav    overflow-hidden  bg-indigo-600">
+      {/* <StickyCountdown /> */}
       <div className="glass-nav flex items-center justify-start px-5 backdrop-blur py-5">
         <Logo />
         <Links />

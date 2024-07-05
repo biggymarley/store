@@ -13,3 +13,8 @@ ul {
   list-style: circle;
   margin-left: 35px;
 }
+
+.img-box{
+  position: sticky;
+  top: 5px;
+}

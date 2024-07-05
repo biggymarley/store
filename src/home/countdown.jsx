@@ -14,7 +14,7 @@ const DAY = HOUR * 24;
 
 const StickyCountdown = () => {
   return (
-    <div className="sticky left-0 right-0 top-0 z-50 w-full bg-indigo-600 px-2 py-0.5 text-white shadow-md">
+    <div className="sticky left-0 right-0 top-0 z-50 w-full bg-indigo-600 px-2 py-0.5 text-black shadow-md">
       <p className="text-center">We Provide Free Shipping and Accept Returns</p>
       <div className="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
         <span className="font-mono font-semibold ">Hurry, only </span>

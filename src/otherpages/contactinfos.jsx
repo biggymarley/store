@@ -6,11 +6,11 @@ export default function Contactusinfos() {
   return (
     <>
       <Header />
-      <div className="h-60" />
+      <div className="h-20" />
 
-      <div className="flex items-center justify-center p-4 mx-auto min-h-[50vh] font-[sans-serif] bg-slate-900/60 backdrop-blur-xl relative z-1">
+      <div className="flex items-center justify-center p-4 mx-auto min-h-[50vh] font-[sans-serif]  backdrop-blur-xl relative z-1">
         <div className="flex flex-col justify-center h-full">
-          <h1 className="text-white text-3xl font-extrabold">Contact Us</h1>
+          <h1 className="text-black text-3xl font-extrabold">Contact Us</h1>
           <div className="flex flex-col gap-3">
             <p className="text-sm text-gray-300 mt-4">{home.contactus.title}</p>
             <p className="text-sm text-gray-300">{home.contactus.adrs}</p>
@@ -22,7 +22,7 @@ export default function Contactusinfos() {
             <p className="text-sm text-gray-300"> {home.contactus.phone}</p>
           </div>
           <div className="mt-12">
-            <h2 className="text-gray-200 text-base font-bold">Email</h2>
+            <h2 className="text-slate-900 text-base font-bold">Email</h2>
             <ul className="mt-4">
               <li className="flex items-center">
                 <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
@@ -41,7 +41,7 @@ export default function Contactusinfos() {
                 </div>
                 <a
                   href="javascript:void(0)"
-                  className="text-gray-200 text-sm ml-4"
+                  className="text-slate-900 text-sm ml-4"
                 >
                   <small className="block">Mail</small>
                   <strong>{home.contactus.email}</strong>

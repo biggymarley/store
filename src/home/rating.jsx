@@ -101,13 +101,13 @@ export const StaggerTestimonials = () => {
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-8">
         <button
           onClick={() => handleMove(-1)}
-          className="grid h-14 w-14 place-content-center text-3xl transition-colors hover:bg-black text-white"
+          className="grid h-14 w-14 place-content-center text-3xl transition-colors hover:bg-indigo-300 rounded text-black"
         >
           <GoArrowLeft />
         </button>
         <button
           onClick={() => handleMove(1)}
-          className="grid h-14 w-14 place-content-center text-3xl transition-colors hover:bg-black text-white"
+          className="grid h-14 w-14 place-content-center text-3xl transition-colors hover:bg-indigo-300 rounded text-black"
         >
           <GoArrowRight />
         </button>
@@ -168,7 +168,7 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize }) => {
       />
       <h3
         className={`text-base sm:text-xl ${
-          isActive ? "text-white" : "text-black"
+          isActive ? "text-black" : "text-black"
         }`}
       >
         "{testimonial.testimonial}"

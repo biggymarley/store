@@ -43,28 +43,28 @@ export default function Product() {
     <>
       <Header />
 
-      <div className="h-60" />
+      <div className="h-20" />
       <section className="relative  min-h-screen flex items-center ">
-        <div className="w-full mx-auto px-4 overflow-hidden sm:px-6 lg:px-0 bg-slate-800 max-w-6xl rounded-md">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
-            <div className="img">
-              <div className="img-box h-full max-lg:mx-auto items-center flex bg-white">
+        <div className="w-full mx-auto px-4  sm:px-6 lg:px-0 bg-slate-100 max-w-6xl rounded-md">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 relative">
+            <div className="img relative bg-white " >
+              <div className="img-box  lg:mx-auto lg:w-[80%]">
                 <img
                   src={product["Variant Image"]}
                   alt="Yellow Tropical Printed Shirt image"
-                  className="max-lg:mx-auto lg:mx-auto  "
+                  className="lg:mx-auto"
                 />
               </div>
             </div>
             <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0 py-8">
               <div className="data w-full max-w-xl">
-                <h2 className="font-manrope font-bold text-3xl leading-10 text-white mb-2 capitalize">
+                <h2 className="font-manrope font-bold text-3xl leading-10 text-black mb-2 capitalize">
                   {product.Title}
                 </h2>
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
-                  <h6 className="font-manrope font-semibold text-2xl leading-9 text-white pr-5 sm:border-r border-gray-200 mr-5">
-                    <del>
-                      <p className="text-sm text-white cursor-auto ml-2">
+                  <h6 className="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">
+                    <del className=" text-red-500">
+                      <p className=" text-red-500">
                         {priceTag}
                         {product["Variant Compare At Price"]}
                       </p>
@@ -89,7 +89,7 @@ export default function Product() {
                 <div>
                   <div
                     dangerouslySetInnerHTML={{ __html: product["Body (HTML)"] }}
-                    className="text-white"
+                    className="text-black"
                   />
                 </div>
 
@@ -105,7 +105,7 @@ export default function Product() {
                       type="text"
                       value={count}
                       // onChange={(e) => setcount(e.target.value)}
-                      className="font-semibold text-white cursor-pointer text-lg py-5 px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-white text-center "
+                      className="font-semibold text-black cursor-pointer text-lg py-5 px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-black text-center "
                       placeholder="1"
                     />
                     <button
