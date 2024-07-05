@@ -1,20 +1,68 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { home } from "../data";
+import { home, priceTag } from "../data";
+import { ProuctsContext } from "../Context";
 export const Hero = () => {
+  const { data } = useContext(ProuctsContext);
+
   return (
     <section className="relative overflow-hidden ">
-      <div className="flex relative">
-        <div className={`w-full relative z-20`}>
+      <div className="flex relative justify-center">
+        <div
+          className={`w-full relative z-20 flex items-center lg:flex-row flex-col max-w-screen-2xl`}
+        >
           <Content />
+          <div className="hidden lg:block">
+            {data?.slice(12, 13)?.map((prd, index) => (
+              <motion.div
+                initial={{
+                  y: 25,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1.25,
+                  delay: 0.25,
+                  ease: "easeInOut",
+                }}
+                className="col-span-12 md:col-span-4  bg-white"
+                key={index}
+              >
+                <Link to={`/catalog/${prd.Handle}`}>
+                  <img
+                    src={prd["Variant Image"]}
+                    alt="Product"
+                    className="w-[1200px]  object-contain"
+                  />
+                  <div className="px-4 py-3  h-full">
+                    <div className="flex items-center">
+                      <p className="text-2xl font-bold text-black cursor-auto my-3">
+                        {priceTag}
+                        {prd["Variant Price"]}
+                      </p>
+                      <del className="text-red-500">
+                        <p className="text-2xl text-red-500 cursor-auto ml-2">
+                          {priceTag}
+                          {prd["Variant Compare At Price"]}
+                        </p>
+                      </del>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        <div className="absolute w-full h-full bg-slate-900/30 z-10" />
-        <div className="absolute h-full z-1">
+        {/* <div className="absolute w-full h-full bg-slate-900/30 z-10" /> */}
+        {/* <div className="absolute h-full z-1">
           <img src={home.hero.heroimg} className="w-screen h-full object-cover blur-sm" />
-        </div>
+        </div> */}
       </div>
       {/* <Beams /> */}
       {/* <Brands /> */}
@@ -93,7 +141,7 @@ const LogoItemsBottom = () => (
 
 const Content = () => {
   return (
-    <div className="relative  mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-24 md:px-8 md:py-36 min-h-[60vh] mt-60 bg-slate-900/40 rounded-lg mb-16 backdrop-blur-sm">
+    <div className="relative  mx-auto flex max-w-6xl flex-col items-start justify-center px-4 py-24 md:px-8 md:py-36 min-h-[60vh] mt-60  rounded-lg mb-16 ">
       <motion.h1
         initial={{
           y: 25,
@@ -108,7 +156,7 @@ const Content = () => {
           delay: 0.25,
           ease: "easeInOut",
         }}
-        className="mb-3 text-center text-3xl font-bold leading-tight text-zinc-50 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
+        className="mb-3 text-start text-3xl font-bold leading-tight text-black sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
         dangerouslySetInnerHTML={{ __html: home.hero.title }}
       >
         {/* {home.hero.title} */}
@@ -127,7 +175,7 @@ const Content = () => {
           delay: 0.5,
           ease: "easeInOut",
         }}
-        className="mb-9 max-w-2xl text-center text-base leading-relaxed text-zinc-100 sm:text-lg md:text-lg md:leading-relaxed"
+        className="mb-9  text-start text-base leading-relaxed text-black sm:text-lg md:text-lg md:leading-relaxed"
       >
         {home.hero.description}
       </motion.p>
