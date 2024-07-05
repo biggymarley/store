@@ -38,7 +38,7 @@ export default function Cart() {
                       <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                         <a href="#" className="shrink-0 md:order-1 ">
                           <img
-                            className="h-80 w-40 object-cover object-center"
+                            className="h-80 w-40 object-contain object-center"
                             src={prod.item["Variant Image"]}
                             alt="Product"
                           />
@@ -110,8 +110,8 @@ export default function Cart() {
                           </div>
                           <div className="text-end md:order-4 md:w-32">
                             <div className="text-xl font-bold text-gray-900 ">
-                              <del>
-                                <p className=" text-gray-900  cursor-auto">
+                              <del  className=" text-red-400  cursor-auto">
+                                <p className=" text-red-400  cursor-auto">
                                   {priceTag}
                                   {prod.item["Variant Compare At Price"]}
                                 </p>

@@ -11,14 +11,14 @@ export default function Home() {
       <Hero />
       <Products />
       <div className="h-20" />
+      <FoldingLogos />
+      <div className="h-20" />
+      {/* pyments */}
       <p className="text-center text-4xl font-bold md:text-5xl text-slate-900">
         Customer Reviews for Our
         <span className="text-slate-500"> Premium Fish Food</span>
       </p>
       <StaggerTestimonials />
-      <div className="h-20" />
-      {/* pyments */}
-      <FoldingLogos />
       <div className="h-20" />
       <Footer />
     </div>
