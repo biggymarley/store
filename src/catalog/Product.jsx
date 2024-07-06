@@ -8,13 +8,14 @@ import Footer from "../home/footer";
 import Header from "../home/header";
 import { priceTag } from "../data";
 import { toast } from "sonner";
-
+const rate = Math.floor(Math.random() * (2574 - 148 + 1)) + 148;
 export default function Product() {
   const navigate = useNavigate();
 
   const { data, addItem } = useContext(ProuctsContext);
   const { id } = useParams();
   const [count, setcount] = useState(1);
+  const [pic, setpic] = useState("");
   const [product, setProduct] = useState({
     id: "",
     productName: "",
@@ -36,6 +37,10 @@ export default function Product() {
     }
   };
   useEffect(() => {
+    setpic(product["Variant Image"]?.[0]);
+  }, [product]);
+
+  useEffect(() => {
     if (data && data.length > 0) fetchdata(data);
   }, [data]);
 
@@ -47,13 +52,24 @@ export default function Product() {
       <section className="relative  min-h-screen flex items-center ">
         <div className="w-full mx-auto px-4  sm:px-6 lg:px-0 bg-slate-100 max-w-6xl rounded-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 relative">
-            <div className="img relative bg-white " >
+            <div className="img relative bg-white ">
               <div className="img-box  lg:mx-auto lg:w-[80%]">
                 <img
-                  src={product["Variant Image"]}
+                  src={pic}
                   alt="Yellow Tropical Printed Shirt image"
                   className="lg:mx-auto"
                 />
+                <div className="flex flex-wrap gap-2 justify-start mt-4">
+                  {product["Variant Image"]?.map((e, index) => (
+                    <img
+                      onClick={() => setpic(e)}
+                      key={index}
+                      src={e}
+                      alt={index}
+                      className="w-20 border-2 border-gray-500 rounded-md hover:scale-105 cursor-pointer"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
             <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0 py-8">
@@ -81,7 +97,7 @@ export default function Product() {
                       <BsStarFill color="#9f9f9f" />
                     </div>
                     <span className="pl-2 font-normal leading-7 text-gray-900 text-sm ">
-                      {Math.floor(Math.random() * (2574 - 148 + 1)) + 148} review
+                      {rate} review
                     </span>
                   </div>
                 </div>
