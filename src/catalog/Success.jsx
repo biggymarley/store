@@ -29,6 +29,7 @@ export default function Success() {
     try {
       const res = await fetch(`${url}/api/sendconfirmation`, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },

@@ -35,7 +35,10 @@ function App() {
   } = useCart();
 
   useEffect(() => {
-    fetch(`${url}/api/`).then(async () => {});
+    fetch(`${url}/api/`, {
+      mode: "cors",
+      method: "GET",
+    }).then(async () => {});
   }, []);
 
   return (
