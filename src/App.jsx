@@ -19,6 +19,9 @@ function App() {
     nextPage,
     previousPage,
     goToPage,
+    searchData,
+    toggleSortOrder,
+    sortOrder,
   } = useFetchJson("/products.json");
   const [appLoading, setAppLoading] = useState(false);
   const [userData, setuserData] = useState(undefined);
@@ -64,6 +67,9 @@ function App() {
           nextPage,
           previousPage,
           goToPage,
+          searchData,
+          toggleSortOrder,
+          sortOrder,
         }}
       >
         {appLoading ? (
