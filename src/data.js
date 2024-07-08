@@ -104,77 +104,77 @@ export const home = {
   },
   rating: [
     {
-      tempId: 0,
-      testimonial: `The fish love it! My tank has never been healthier.`,
-      by: `Andre`,
-      imgSrc: `https://randomuser.me/api/portraits/men/83.jpg`,
+      "tempId": 0,
+      "testimonial": "The best coffee I've ever had! My mornings are now complete.",
+      "by": "Andre",
+      "imgSrc": "https://randomuser.me/api/portraits/men/83.jpg"
     },
     {
-      tempId: 1,
-      testimonial: `Best fish food on the market. Highly recommend!`,
-      by: `Stephanie`,
-      imgSrc: `https://randomuser.me/api/portraits/women/84.jpg`,
+      "tempId": 1,
+      "testimonial": "This coffee machine is a game-changer. Highly recommend!",
+      "by": "Stephanie",
+      "imgSrc": "https://randomuser.me/api/portraits/women/84.jpg"
     },
     {
-      tempId: 2,
-      testimonial: `Great variety and my fish can't get enough of it.`,
-      by: `Fernando`,
-      imgSrc: `https://randomuser.me/api/portraits/men/85.jpg`,
+      "tempId": 2,
+      "testimonial": "Great variety of features and makes the perfect cup every time.",
+      "by": "Fernando",
+      "imgSrc": "https://randomuser.me/api/portraits/men/85.jpg"
     },
     {
-      tempId: 3,
-      testimonial: `My fish are healthier and more vibrant than ever.`,
-      by: `Marie`,
-      imgSrc: `https://randomuser.me/api/portraits/women/86.jpg`,
+      "tempId": 3,
+      "testimonial": "My coffee is richer and more flavorful than ever.",
+      "by": "Marie",
+      "imgSrc": "https://randomuser.me/api/portraits/women/86.jpg"
     },
     {
-      tempId: 4,
-      testimonial: `If I could give 11 stars, I'd give 12. Best fish food ever!`,
-      by: `Andre`,
-      imgSrc: `https://randomuser.me/api/portraits/men/87.jpg`,
+      "tempId": 4,
+      "testimonial": "If I could give 11 stars, I'd give 12. Best coffee machine ever!",
+      "by": "Andre",
+      "imgSrc": "https://randomuser.me/api/portraits/men/87.jpg"
     },
     {
-      tempId: 5,
-      testimonial: `So happy we found this fish food! Our tank has never been cleaner.`,
-      by: `Marina`,
-      imgSrc: `https://randomuser.me/api/portraits/women/88.jpg`,
+      "tempId": 5,
+      "testimonial": "So happy we found this coffee machine! Our mornings have never been better.",
+      "by": "Marina",
+      "imgSrc": "https://randomuser.me/api/portraits/women/88.jpg"
     },
     {
-      tempId: 6,
-      testimonial: `Took some convincing, but now my fish tank looks amazing.`,
-      by: `Jack`,
-      imgSrc: `https://randomuser.me/api/portraits/men/89.jpg`,
+      "tempId": 6,
+      "testimonial": "Took some convincing, but now my mornings are amazing.",
+      "by": "Jack",
+      "imgSrc": "https://randomuser.me/api/portraits/men/89.jpg"
     },
     {
-      tempId: 7,
-      testimonial: `Would be lost without this fish food. The ROI is easily 100X for us.`,
-      by: `Daniela`,
-      imgSrc: `https://randomuser.me/api/portraits/women/90.jpg`,
+      "tempId": 7,
+      "testimonial": "Would be lost without this coffee machine. The ROI is easily 100X for us.",
+      "by": "Daniela",
+      "imgSrc": "https://randomuser.me/api/portraits/women/90.jpg"
     },
     {
-      tempId: 8,
-      testimonial: `It's just the best fish food. Period.`,
-      by: `Fernando`,
-      imgSrc: `https://randomuser.me/api/portraits/men/91.jpg`,
+      "tempId": 8,
+      "testimonial": "It's just the best coffee machine. Period.",
+      "by": "Fernando",
+      "imgSrc": "https://randomuser.me/api/portraits/men/91.jpg"
     },
     {
-      tempId: 9,
-      testimonial: `I switched 5 years ago and never looked back. Excellent product!`,
-      by: `Sofie`,
-      imgSrc: `https://randomuser.me/api/portraits/women/92.jpg`,
+      "tempId": 9,
+      "testimonial": "I switched 5 years ago and never looked back. Excellent product!",
+      "by": "Sofie",
+      "imgSrc": "https://randomuser.me/api/portraits/women/92.jpg"
     },
     {
-      tempId: 10,
-      testimonial: `I've been searching for great fish food for years. So glad I found this one!`,
-      by: `Pete`,
-      imgSrc: `https://randomuser.me/api/portraits/men/93.jpg`,
+      "tempId": 10,
+      "testimonial": "I've been searching for a great coffee machine for years. So glad I found this one!",
+      "by": "Pete",
+      "imgSrc": "https://randomuser.me/api/portraits/men/93.jpg"
     },
     {
-      tempId: 11,
-      testimonial: `It's so simple and intuitive, even my kids can feed the fish with it.`,
-      by: `Marina`,
-      imgSrc: `https://randomuser.me/api/portraits/women/94.jpg`,
-    },
+      "tempId": 11,
+      "testimonial": "It's so simple and intuitive, even my kids can make coffee with it.",
+      "by": "Marina",
+      "imgSrc": "https://randomuser.me/api/portraits/women/94.jpg"
+    }
   ],
   footer: {
     items: [

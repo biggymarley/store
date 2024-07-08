@@ -125,7 +125,7 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize }) => {
       onClick={() => handleMove(position)}
       className={`
       absolute left-1/2 top-1/2 cursor-pointer border-black p-8 text-black transition-colors duration-500 ${
-        isActive ? "z-10 bg-indigo-600" : "z-0 bg-white"
+        isActive ? "z-10 bg-gradient-to-br from-indigo-400 to-indigo-700" : "z-0 bg-white"
       }
       `}
       style={{
@@ -168,7 +168,7 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize }) => {
       />
       <h3
         className={`text-base sm:text-xl ${
-          isActive ? "text-black" : "text-black"
+          isActive ? "text-white" : "text-black"
         }`}
       >
         "{testimonial.testimonial}"

@@ -1,5 +1,8 @@
 import { useAnimate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { BiBox, BiSolidOffer } from "react-icons/bi";
+import { BsBox, BsTruck } from "react-icons/bs";
+import { FaBox } from "react-icons/fa";
 
 // NOTE: Change this date to whatever date you want to countdown to :)
 let today = new Date();
@@ -14,9 +17,16 @@ const DAY = HOUR * 24;
 
 const StickyCountdown = () => {
   return (
-    <div className="sticky left-0 right-0 top-0 z-50 w-full bg-indigo-600 px-2 py-0.5 text-black shadow-md">
-      <p className="text-center">We Provide Free Shipping and Accept Returns</p>
-      <div className="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
+    <div className="sticky left-0 right-0 top-0 z-50 w-full bg-black px-2 py-0.5 text-black shadow-md">
+      <p className="flex justify-center items-center gap-4 text-center py-1 text-white font-regular text-sm">
+        <BiSolidOffer size={20}/>
+        Up to 70% Off
+        <BsTruck size={20}/>
+        Free Shipping
+        <FaBox size={16}/>
+        Accept Returns
+      </p>
+      {/* <div className="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
         <span className="font-mono font-semibold ">Hurry, only </span>
         <CountdownItem unit="Hour" text="hours" />
         <CountdownItem unit="Minute" text="minutes" />
@@ -24,7 +34,7 @@ const StickyCountdown = () => {
         <span className="font-mono font-semibold ">
           left to grab this amazing deal.{" "}
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

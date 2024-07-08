@@ -5,7 +5,7 @@ import { Mastercard, Visa, Paypal } from "react-payment-logos/dist/flat";
 
 export default function Footer() {
   return (
-    <footer className=" relative z-1 backdrop-blur-xl bg-indigo-600 mt-auto">
+    <footer className=" relative z-1 backdrop-blur-xl bg-gradient-to-br from-indigo-400 to-indigo-700 mt-auto">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between flex-col gap-8">
           <div className="grid grid-cols-2 gap-1 sm:grid-cols-3">

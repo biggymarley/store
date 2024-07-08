@@ -21,8 +21,8 @@ const GlassNavigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="z-50		 glass-nav    overflow-hidden  bg-orange-100/40">
-      {/* <StickyCountdown /> */}
+    <nav className="z-50		 glass-nav    overflow-hidden  bg-gradient-to-br from-indigo-400 to-indigo-700">
+       <StickyCountdown /> 
       <div className="glass-nav flex items-center justify-start px-5 backdrop-blur py-2">
         <Logo />
         <Links />
@@ -66,7 +66,7 @@ const GlassLink = ({ text, path }) => {
       to={path}
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
-      <span className="relative z-10 text-black transition-colors group-hover:text-indigo-400 font-semibold ">
+      <span className="relative z-10 text-white transition-colors group-hover:text-black font-regular ">
         {text}
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
