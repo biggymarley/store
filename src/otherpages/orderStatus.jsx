@@ -26,7 +26,7 @@ export default function OrderStatus() {
             />
             <button
               type="button"
-              className="text-black bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
+              className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
             >
               Track
             </button>

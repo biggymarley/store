@@ -33,6 +33,7 @@ export default {
           800: "#2C1710",
           900: "#160B08",
         },
+        // white: "#000000"
       },
     },
     fontFamily: {

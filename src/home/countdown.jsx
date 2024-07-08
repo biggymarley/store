@@ -18,13 +18,20 @@ const DAY = HOUR * 24;
 const StickyCountdown = () => {
   return (
     <div className="sticky left-0 right-0 top-0 z-50 w-full bg-black px-2 py-0.5 text-black shadow-md">
-      <p className="flex justify-center items-center gap-4 text-center py-1 text-white font-regular text-sm">
-        <BiSolidOffer size={20}/>
-        Up to 70% Off
-        <BsTruck size={20}/>
-        Free Shipping
-        <FaBox size={16}/>
-        Accept Returns
+      <p className="flex justify-center flex-row flex-wrap  items-center gap-4 text-center py-1 text-white font-regular text-sm">
+        <span className="flex justify-center items-center  gap-1">
+          <BiSolidOffer size={20} />
+          Up to 70% Off
+        </span>
+        <span className="flex justify-center items-center  gap-1">
+          <BsTruck size={20} />
+          Free Shipping
+        </span>
+
+        <span className="flex justify-center items-center  gap-1">
+          <FaBox size={16} />
+          Accept Returns
+        </span>
       </p>
       {/* <div className="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
         <span className="font-mono font-semibold ">Hurry, only </span>

@@ -96,7 +96,7 @@ const Buttons = ({ setMenuOpen }) => {
 
       <button
         onClick={() => setMenuOpen((pv) => !pv)}
-        className="ml-2 block scale-100 text-3xl text-indigo-600 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
+        className="ml-2 block scale-100 text-3xl text-white transition-all hover:scale-105 hover:text-white/50 active:scale-95 md:hidden"
       >
         <FiMenu />
       </button>
