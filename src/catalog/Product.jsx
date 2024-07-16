@@ -44,6 +44,13 @@ export default function Product() {
     if (data && data.length > 0) fetchdata(data);
   }, [data]);
 
+
+const addItemToasted = () => {
+  toast.success("Product added to cart");
+  addItem(product, count)
+}
+
+
   return (
     <>
       <Header />
@@ -133,7 +140,7 @@ export default function Product() {
                     </button>
                   </div>
                   <button
-                    onClick={() => addItem(product, count)}
+                    onClick={addItemToasted}
                     className="group py-4 px-5 rounded-full bg-indigo-50 text-indigo-600 font-semibold text-lg w-full flex items-center justify-center gap-2 transition-all duration-500 hover:bg-indigo-100"
                   >
                     <svg

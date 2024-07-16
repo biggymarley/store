@@ -6,6 +6,7 @@ import Footer from "../home/footer";
 import Header from "../home/header";
 import { GiEmptyWoodBucket } from "react-icons/gi";
 import { BsCartX } from "react-icons/bs";
+import { toast } from "sonner";
 
 export default function Cart() {
   const { total, cart, removeItem, removeNumProduct, addNumProduct } =
@@ -15,6 +16,12 @@ export default function Cart() {
   useEffect(() => {
     // if (cart.length <= 0) navigate("/catalog");
   }, [cart, navigate]);
+
+  const removeItemToasted = (prod) => {
+    toast.success("Product removed from cart");
+    removeItem(prod)
+  }
+
 
   return (
     <>
@@ -132,7 +139,7 @@ export default function Cart() {
 
                           <div className="flex items-center gap-4">
                             <button
-                              onClick={() => removeItem(prod.item["Handle"])}
+                              onClick={() => removeItemToasted(prod.item["Handle"])}
                               type="button"
                               className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500"
                             >
