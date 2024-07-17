@@ -2,9 +2,13 @@ import { useState } from "react";
 import { home } from "../data";
 import Footer from "../home/footer";
 import Header from "../home/header";
+import { toast } from "sonner";
 
 export default function OrderStatus() {
-  const [orderstatus, setorderstatus] = useState('')
+  const [orderstatus, setorderstatus] = useState("");
+  const handleSub = () => {
+    toast.error("Tracking number not found");
+  };
   return (
     <>
       <Header />
@@ -30,7 +34,8 @@ export default function OrderStatus() {
             />
             <button
               type="button"
-              disabled={orderstatus.trim() === ''}
+              onClick={handleSub}
+              disabled={orderstatus.trim() === ""}
               className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
             >
               Track
