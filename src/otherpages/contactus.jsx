@@ -20,7 +20,7 @@ export default function Contactus() {
 
   const sendEmail = async (values) => {
     try {
-      await fetch(`${url}/api/sendconfirmation`, {
+      await fetch(`${url}/api/contactus`, {
         method: "POST",
         mode: "cors",
         headers: {
