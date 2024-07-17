@@ -141,6 +141,7 @@ export default function Contactus() {
           )}
           <button
             type="button"
+            onClick={() => formik.handleSubmit()}
             className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
           >
             Send
