@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { home } from "../data";
 import Footer from "../home/footer";
 import Header from "../home/header";
 
 export default function OrderStatus() {
+  const [orderstatus, setorderstatus] = useState('')
   return (
     <>
       <Header />
@@ -23,9 +25,12 @@ export default function OrderStatus() {
               type="text"
               placeholder="tracking number"
               className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
+              value={orderstatus}
+              onChange={(e) => setorderstatus(e.target.value)}
             />
             <button
               type="button"
+              disabled={orderstatus.trim() === ''}
               className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
             >
               Track
