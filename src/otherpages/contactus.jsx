@@ -86,10 +86,7 @@ export default function Contactus() {
             </ul>
           </div>
         </div>
-        <form
-          className="ml-auto space-y-4 flex flex-col w-full justify-center  h-full"
-          onSubmit={() => formik.handleSubmit()}
-        >
+        <form className="ml-auto space-y-4 flex flex-col w-full justify-center  h-full">
           <input
             type="text"
             placeholder="Name"
@@ -143,7 +140,8 @@ export default function Contactus() {
             </span>
           )}
           <button
-            type="submit"
+            type="button"
+            onClick={() => formik.handleSubmit()}
             className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
           >
             Send
