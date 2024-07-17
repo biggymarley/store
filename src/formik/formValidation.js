@@ -22,3 +22,14 @@ export const userProfileValidation = Yup.object({
     .matches(phoneRegExp, "wrong phone number")
     .required("Required"),
 });
+
+export const contactusValidation = Yup.object({
+  name: Yup.string().min(2, "Must 2 characters or more").required("Required"),
+  subject: Yup.string()
+    .min(2, "Must 2 characters or more")
+    .required("Required"),
+  email: Yup.string().email("Invalid email address").required("Required"),
+  message: Yup.string()
+    .min(2, "Must 2 characters or more")
+    .required("Required"),
+});

@@ -1,13 +1,51 @@
+import { useState } from "react";
+import { toast } from "sonner";
+import { url } from "../Context";
 import { home } from "../data";
+import { contactusValidation } from "../formik/formValidation";
+import { contactusFormValues } from "../formik/formValues";
 import Footer from "../home/footer";
 import Header from "../home/header";
+import { useFormik } from "formik";
 
 export default function Contactus() {
+  const formik = useFormik({
+    initialValues: contactusFormValues,
+    validationSchema: contactusValidation,
+    validateOnChange: false,
+    onSubmit: (values) => {
+      sendEmail(values);
+    },
+  });
+
+  const sendEmail = async (values) => {
+    try {
+      await fetch(`${url}/api/sendconfirmation`, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: values.message,
+          email: values.email,
+          subject: values.subject,
+          name: values.name,
+        }),
+      });
+      toast.success(
+        "Your email has been successfully sent. We will contact you shortly."
+      );
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <>
       <Header />
       <div className="h-20" />
-      <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto min-h-[50vh]  backdrop-blur-xl font-[sans-serif] max-w-6xl relative z-1" >
+      <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto min-h-[50vh]  backdrop-blur-xl font-[sans-serif] max-w-6xl relative z-1">
         <div className="flex flex-col justify-center h-full">
           <h1 className="text-black text-3xl font-extrabold">Contact Us</h1>
           <div className="flex flex-col gap-3">
@@ -52,23 +90,55 @@ export default function Contactus() {
           <input
             type="text"
             placeholder="Name"
+            name="name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
             className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
           />
+          {formik.errors.name && (
+            <span className="text-red-400 text-sm">{formik.errors.name}</span>
+          )}
           <input
             type="email"
             placeholder="Email"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
             className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
           />
+          {formik.errors.email && (
+            <span className="text-red-400 text-sm">{formik.errors.email}</span>
+          )}
           <input
             type="text"
             placeholder="Subject"
+            name="subject"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.subject}
             className="w-full rounded-md py-3 px-4 bg-gray-100 text-slate-900 text-sm outline-blue-500 "
           />
+          {formik.errors.subject && (
+            <span className="text-red-400 text-sm">
+              {formik.errors.subject}
+            </span>
+          )}
           <textarea
             placeholder="Message"
+            name="message"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
             rows="6"
             className="w-full rounded-md px-4 bg-gray-100 text-slate-900 text-sm pt-3 outline-blue-500 "
           ></textarea>
+          {formik.errors.message && (
+            <span className="text-red-400 text-sm">
+              {formik.errors.message}
+            </span>
+          )}
           <button
             type="button"
             className="text-white bg-indigo-600 hover:bg-indigo-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"

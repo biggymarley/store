@@ -8,3 +8,11 @@ export const userProfileFormValues = {
   city: "",
   email:"",
 };
+
+
+export const contactusFormValues = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
